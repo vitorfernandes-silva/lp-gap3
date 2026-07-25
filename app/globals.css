@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0C1014;
+  --foreground: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0C1014;
+  color: #FFFFFF;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Font Family Utilities */
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Custom GAP3 Gold Gradient Utilities */
+.bg-gap3-gold-gradient {
+  background: linear-gradient(135deg, #FFC900 0%, #F3A200 50%, #DD8600 100%);
+}
+
+.text-gap3-gold-gradient {
+  background: linear-gradient(135deg, #FFC900 0%, #F3A200 60%, #FFC000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(243, 162, 0, 0.25);
+}
+
+.gold-border-glow {
+  border-color: rgba(243, 162, 0, 0.4);
+  box-shadow: 0 0 15px rgba(243, 162, 0, 0.15);
+}
+
+/* Slower & Smoother Infinite Tilted Marquee Animation (200s duration = 50% speed) */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 200s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 200s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0C1014;
+}
+::-webkit-scrollbar-thumb {
+  background: #232B36;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F3A200;
+}
