@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     "Tráfego Pago Restaurante",
   ],
   authors: [{ name: "GAP3 Assessoria" }],
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "GAP3 Assessoria | Solução de Crescimento para Food Services",
     description:

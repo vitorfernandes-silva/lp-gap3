@@ -66,31 +66,28 @@ export function TestimonialsSection() {
   const marqueeItems = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 md:py-24 bg-[#090C0F] border-y border-[#232B36] relative overflow-hidden font-inter">
+    <section className="py-16 md:py-24 bg-white text-[#0C1014] border-b border-black/10 relative overflow-hidden font-inter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
         {/* Header Badge */}
         <Badge iconName="solar:stars-bold" className="mb-4">
-          Resultados de Impacto
+          Resultados de impacto
         </Badge>
 
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-semibold text-white tracking-tight leading-tight mb-4">
-          Mais de <span className="text-gap3-gold-gradient">100 restaurantes</span> com resultados reais. Isso é <span className="text-gap3-gold-gradient">GAP3.</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight">
+          Mais de <span className="text-[#D98600]">100 restaurantes</span> com resultados reais. <br className="hidden sm:block" />Isso é <span className="text-[#D98600]">GAP3.</span>
         </h2>
-        <p className="text-base md:text-lg text-[#A0A5B1] max-w-3xl mx-auto font-normal">
-          Veja o depoimento de donos de restaurantes que transformaram seus processos comerciais e bateram recorde de faturamento.
-        </p>
       </div>
 
-      {/* Marquee Track Container with Left & Right Gradient Fade Mask */}
+      {/* Marquee Track Container with Left & Right White Fade Gradient Mask */}
       <div className="relative w-full overflow-hidden py-4">
         {/* Left Fade Gradient */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#090C0F] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-white to-transparent z-10" />
 
         {/* Right Fade Gradient */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#090C0F] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-white to-transparent z-10" />
 
-        {/* Infinite Scrolling Track (Speed: 35s) */}
+        {/* Infinite Scrolling Track */}
         <div
           className="flex w-max whitespace-nowrap animate-marquee hover:[animation-play-state:paused]"
           style={{ animationDuration: "35s" }}
@@ -98,7 +95,7 @@ export function TestimonialsSection() {
           {marqueeItems.map((item, idx) => (
             <div
               key={idx}
-              className="mx-3 w-[320px] sm:w-[360px] bg-[#14181F] border border-[#232B36] hover:border-[#00E636]/50 rounded-2xl p-6 whitespace-normal flex flex-col justify-between shadow-xl transition-all duration-300 group shrink-0"
+              className="mx-3 w-[320px] sm:w-[360px] bg-[#0C1014] border border-gray-800 hover:border-[#00E636]/50 rounded-2xl p-6 whitespace-normal flex flex-col justify-between shadow-xl transition-all duration-300 group shrink-0"
             >
               <div>
                 {/* Header: Avatar, Name & Handle */}
@@ -110,7 +107,7 @@ export function TestimonialsSection() {
                     <h3 className="text-base font-inter font-semibold text-white truncate">
                       {item.name}
                     </h3>
-                    <p className="text-xs text-[#A0A5B1] truncate font-normal">
+                    <p className="text-xs text-gray-400 truncate font-normal">
                       {item.handle} • {item.role}
                     </p>
                   </div>
@@ -123,13 +120,13 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-xs sm:text-sm text-[#E4E4E4] leading-relaxed italic font-normal mb-4">
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed italic font-normal mb-4">
                   "{item.quote}"
                 </p>
               </div>
 
               {/* Stars */}
-              <div className="flex items-center space-x-1 text-[#FFC900] pt-2 border-t border-[#232B36]/60">
+              <div className="flex items-center space-x-1 text-[#FFC900] pt-2 border-t border-white/10">
                 {[...Array(item.stars)].map((_, i) => (
                   <SolarIcon key={i} name="solar:star-bold" size={16} />
                 ))}
@@ -138,6 +135,14 @@ export function TestimonialsSection() {
           ))}
         </div>
       </div>
+
+      {/* Description Below Depoimentos in Black */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 text-center">
+        <p className="text-base sm:text-lg text-[#0C1014] font-inter font-medium leading-relaxed">
+          Veja o depoimento de donos de restaurantes que transformaram seus processos comerciais e bateram recorde de faturamento.
+        </p>
+      </div>
+
     </section>
   );
 }

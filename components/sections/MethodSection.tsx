@@ -1,198 +1,110 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
+import Link from "next/link";
 import { Badge } from "../ui/Badge";
 import { SolarIcon } from "../ui/SolarIcon";
 
-interface StepItem {
-  id: number;
-  numberLabel: string;
-  title: string;
-  shortLabel: string;
-  icon: string;
-  shortSummary: string;
-}
-
 export function MethodSection() {
-  const [hoveredStepId, setHoveredStepId] = useState<number | null>(null);
-
-  // Etapas de 1 a 5 (Sem enumeração nos labels de texto externos, apenas nos círculos)
-  const steps: StepItem[] = [
+  const steps = [
     {
-      id: 1,
-      numberLabel: "01",
-      title: "Aquisição Regional",
-      shortLabel: "Aquisição",
-      icon: "solar:user-plus-bold-duotone",
-      shortSummary: "Anúncios e atração geolocalizada para trazer novos clientes.",
+      letter: "1",
+      title: "Diagnóstico",
+      description:
+        "Mergulhamos na operação do seu restaurante. Analisamos taxas de conversão, cardápio digital, perfis no iFood e 99Food, quantidade de SKUs, combos e precificação. Entendemos onde está o gargalo antes de qualquer ação.",
     },
     {
-      id: 2,
-      numberLabel: "02",
-      title: "Conversão & Vendas",
-      shortLabel: "Conversão",
-      icon: "solar:shop-2-bold-duotone",
-      shortSummary: "Cardápio digital e atendimento ágil para fechar pedidos.",
+      letter: "2",
+      title: "Estratégia",
+      description:
+        "Definimos metas reais e construímos o plano completo: otimização de cardápio, planejamento de conteúdo para redes sociais e ações para posicionar seu restaurante como referência na região.",
     },
     {
-      id: 3,
-      numberLabel: "03",
-      title: "Captura de Dados",
-      shortLabel: "Captura",
-      icon: "solar:user-bold-duotone",
-      shortSummary: "Coleta automática de contatos no salão e delivery.",
+      letter: "3",
+      title: "Execução",
+      description:
+        "Colocamos o plano em prática. Otimizamos seus perfis, publicamos com estratégia, ativamos campanhas e estruturamos o processo de fidelização para fazer o cliente voltar sem depender de sorte.",
     },
     {
-      id: 4,
-      numberLabel: "04",
-      title: "Organização de CRM",
-      shortLabel: "CRM",
-      icon: "solar:chart-2-bold-duotone",
-      shortSummary: "Gestão inteligente de clientes e relatórios semanais.",
+      letter: "4",
+      title: "Escala",
+      description:
+        "Monitoramos os resultados semana a semana, ajustamos o que precisa e aceleramos o que está funcionando. Seu restaurante cresce com previsibilidade, não no achismo.",
     },
-    {
-      id: 5,
-      numberLabel: "05",
-      title: "Fidelização & Recompra",
-      shortLabel: "Fidelização",
-      icon: "solar:star-bold-duotone",
-      shortSummary: "Campanhas no WhatsApp para gerar vendas recorrentes.",
-    },
-  ];
-
-  // Coordinates around the central wheel for 5 items (Clockwise starting top)
-  const nodePositions = [
-    { top: "4%", left: "50%", transform: "translate(-50%, 0)" },   // 1: Top
-    { top: "28%", right: "6%", transform: "translate(0, 0)" },    // 2: Right Top
-    { bottom: "8%", right: "14%", transform: "translate(0, 0)" }, // 3: Right Bottom
-    { bottom: "8%", left: "14%", transform: "translate(0, 0)" },  // 4: Left Bottom
-    { top: "28%", left: "6%", transform: "translate(0, 0)" },     // 5: Left Top
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#090C0F] border-y border-[#232B36] relative overflow-hidden font-inter">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-[#F3A200] text-[#0C1014] font-inter border-b border-black/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <Badge iconName="solar:diagram-up-bold" className="mb-4">
-            Metodologia validada
+        <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
+          <Badge iconName="solar:diagram-up-bold" variant="gold" className="mb-2">
+            Nossa metodologia
           </Badge>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-semibold text-white tracking-tight leading-tight mb-4">
-            O ciclo contínuo de crescimento para o seu restaurante{" "}
-            <span className="text-gap3-gold-gradient">nunca parar de vender</span>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight">
+            Método <span className="text-white">GAP3</span>
           </h2>
-          <p className="text-sm md:text-base text-[#A0A5B1] font-normal">
-            Passe o mouse sobre cada número para visualizar a explicação rápida da etapa.
+
+          <p className="text-base sm:text-lg text-[#0C1014]/90 font-medium max-w-2xl mx-auto leading-relaxed">
+            Essa é a metodologia exclusiva que utilizamos para transformar restaurantes em líderes de faturamento.
           </p>
         </div>
 
-        {/* Circular Wheel Container */}
-        <div className="relative max-w-2xl mx-auto h-[500px] sm:h-[580px] md:h-[640px] flex items-center justify-center">
-          {/* Central Image with 2x Larger White Logo Above "Método GAP3" Text */}
-          <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#F3A200] shadow-2xl relative z-10 p-1 bg-[#14181F] flex flex-col items-center justify-center text-center">
-            <Image
-              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
-              alt="Método GAP3"
-              fill
-              unoptimized
-              className="object-cover rounded-full"
-              priority
-            />
-            {/* Dark Overlay for High Contrast */}
-            <div className="absolute inset-0 rounded-full bg-black/55" />
+        {/* 4 Cards Grid with Rich Dark-Gold Gradient Style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {steps.map((step, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-[#12161F] via-[#1A212D] to-[#0D1117] border border-white/15 hover:border-[#FFC900]/70 rounded-3xl p-7 sm:p-9 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.5)] flex flex-col justify-between group relative overflow-hidden text-white backdrop-blur-xl"
+            >
+              {/* Top Accent Gradient Light on Hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFC900] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Background Corner Glow */}
+              <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#FFC900]/10 rounded-full blur-2xl group-hover:bg-[#FFC900]/25 transition-all duration-500 pointer-events-none" />
 
-            {/* White Logo (2x Larger) + Centered Text "Método GAP3" (2x Larger) */}
-            <div className="relative z-20 flex flex-col items-center justify-center space-y-2 px-4">
-              <Image
-                src="/images/logo.png"
-                alt="GAP3 Logo"
-                width={240}
-                height={70}
-                className="h-14 sm:h-16 md:h-20 w-auto object-contain brightness-0 invert drop-shadow-xl"
-              />
-              <span className="text-white font-poppins font-semibold text-base sm:text-xl md:text-2xl tracking-widest uppercase drop-shadow-2xl">
-                Método GAP3
-              </span>
-            </div>
-          </div>
+              <div className="relative z-10">
+                {/* Header Row: Title & Circle Number Badge */}
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl sm:text-2xl font-poppins font-bold text-white tracking-tight group-hover:text-[#FFC900] transition-colors">
+                    {step.title}
+                  </h3>
 
-          {/* Dotted Circular Track Line */}
-          <div className="absolute w-[360px] h-[360px] sm:w-[440px] sm:h-[440px] md:w-[500px] md:h-[500px] rounded-full border-2 border-dashed border-[#F3A200]/40 pointer-events-none" />
-
-          {/* Curved Directional Gold Arrow Background Animation */}
-          <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-            <SolarIcon
-              name="solar:restart-bold-duotone"
-              size={440}
-              className="text-[#F3A200]/15 animate-spin-slow"
-            />
-          </div>
-
-          {/* 5 Circular Nodes */}
-          {steps.map((step, idx) => {
-            const pos = nodePositions[idx];
-            const isHovered = hoveredStepId === step.id;
-
-            return (
-              <div
-                key={step.id}
-                style={pos}
-                className="absolute z-30 flex flex-col items-center cursor-pointer group"
-                onMouseEnter={() => setHoveredStepId(step.id)}
-                onMouseLeave={() => setHoveredStepId(null)}
-              >
-                {/* Circle Icon & Number Button */}
-                <div
-                  className={`w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-white border-2 flex flex-col items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 relative ${
-                    isHovered
-                      ? "border-[#F3A200] ring-4 ring-[#F3A200]/60 scale-110 bg-[#FFC900]"
-                      : "border-gray-900 hover:border-[#F3A200]"
-                  }`}
-                >
-                  <span className="text-[10px] sm:text-xs font-bold text-[#0C1014] leading-none mb-0.5">
-                    {step.numberLabel}
-                  </span>
-                  <SolarIcon
-                    name={step.icon}
-                    size={26}
-                    className="text-[#0C1014]"
-                  />
+                  {/* Gradient Circle Number Badge */}
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FFC900] via-[#F3A200] to-[#E59400] text-[#0C1014] font-poppins font-bold text-xl flex items-center justify-center shadow-[0_4px_14px_rgba(243,162,0,0.4)] shrink-0 border border-white/20 transform group-hover:scale-110 transition-transform duration-300">
+                    {step.letter}
+                  </div>
                 </div>
 
-                {/* Node Title Label (Without number prefix) */}
-                <span className="mt-2 text-center text-[10px] sm:text-xs font-poppins font-semibold uppercase tracking-wider text-white max-w-[120px] leading-tight bg-[#090C0F]/90 px-2.5 py-1 rounded-md border border-[#232B36] group-hover:border-[#F3A200]">
-                  {step.shortLabel}
-                </span>
-
-                {/* Hover Card Tooltip (Opens on Mouse Over) */}
-                {isHovered && (
-                  <div
-                    className={`absolute z-40 bg-[#14181F] border-2 border-[#F3A200] rounded-2xl p-4 shadow-2xl w-64 text-left pointer-events-none transition-all duration-200 animate-in fade-in zoom-in-95 ${
-                      idx === 0
-                        ? "top-24 left-1/2 -translate-x-1/2"
-                        : idx === 1 || idx === 2
-                        ? "right-full mr-3 top-0"
-                        : "left-full ml-3 top-0"
-                    }`}
-                  >
-                    <div className="flex items-center space-x-2 mb-1.5">
-                      <span className="bg-gap3-gold-gradient text-[#0C1014] text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        Etapa {step.numberLabel}
-                      </span>
-                      <h4 className="text-xs font-poppins font-semibold text-white">
-                        {step.title}
-                      </h4>
-                    </div>
-                    <p className="text-xs text-[#E4E4E4] font-normal leading-snug">
-                      {step.shortSummary}
-                    </p>
-                  </div>
-                )}
+                {/* Description */}
+                <p className="text-sm sm:text-base font-inter text-gray-300 leading-relaxed font-normal">
+                  {step.description}
+                </p>
               </div>
-            );
-          })}
+
+              {/* Bottom Accent Step Bar */}
+              <div className="relative z-10 pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 group-hover:text-[#FFC900] transition-colors">
+                <span className="font-mono text-[11px] tracking-wider text-[#FFC900]/80">Etapa #0{step.letter}</span>
+                <SolarIcon name="solar:alt-arrow-right-linear" size={16} className="transform group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Green CTA Button */}
+        <div className="mt-14 text-center flex justify-center">
+          <Link
+            href="/analise"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-poppins font-bold text-sm sm:text-base md:text-lg py-3.5 px-6 sm:py-4 sm:px-8 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide"
+          >
+            <span className="block sm:hidden">Quero meu método</span>
+            <span className="hidden sm:block">Quero aplicação do método GAP3</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" size={20} className="text-[#0C1014]" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );

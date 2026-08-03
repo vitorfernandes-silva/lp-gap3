@@ -8,91 +8,125 @@ import { InfiniteRibbon } from "../ui/infinite-ribbon";
 
 export function Hero() {
   const tickerText =
-    "+100 CLIENTES ATENDIDOS • +R$ 2MM GERADOS PARA NOSSOS CLIENTES • +60% DE PRODUTIVIDADE • TIME 100% ESPECIALIZADO EM RESTAURANTES • ";
+    "+100 Clientes atendidos • +R$ 2MM gerados para nossos clientes • +60% de produtividade • Time 100% especializado em restaurantes • ";
 
   return (
-    <section className="relative bg-gradient-to-b from-[#F3A200] via-[#FFC900] to-[#F3A200] text-[#0C1014] pt-16 md:pt-24 pb-20 overflow-hidden">
-      {/* Background Chevron Texture Pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
+    <section className="relative bg-[#050608] text-white pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden border-b border-white/10 min-h-screen lg:min-h-screen flex flex-col justify-between">
+      
+      {/* Desktop Background Image (Only visible on lg screens) */}
+      <Image
+        src="/images/HERO-LP-GAP3.png"
+        alt="GAP3 Assessoria Background"
+        fill
+        priority
+        unoptimized
+        className="hidden lg:block object-cover object-center pointer-events-none z-0"
+      />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Logo Icon + White Text "GAP3 Assessoria" */}
-        <div className="flex items-center justify-center space-x-3 mb-8">
-          <Image
-            src="/images/logo.png"
-            alt="GAP3 Assessoria Logo"
-            width={240}
-            height={65}
-            priority
-            className="h-12 md:h-16 w-auto object-contain brightness-0"
-          />
-          <span className="text-white font-poppins font-semibold text-2xl md:text-3xl tracking-tight drop-shadow-md">
-            GAP3 Assessoria
-          </span>
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-between flex-grow">
+        
+        {/* Navmenu Header (Mobile & Desktop) */}
+        <div className="flex items-center justify-between py-4 border-b border-white/10 relative z-30 mb-6 lg:mb-10">
+          <div className="flex items-center space-x-1 sm:space-x-2">
+            <Image
+              src="/images/logo.png"
+              alt="GAP3 Assessoria Logo"
+              width={160}
+              height={45}
+              priority
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain"
+            />
+            <span className="text-white font-poppins font-bold text-lg sm:text-xl md:text-2xl tracking-tight">
+              GAP<span className="text-[#FFC900]">3</span>
+            </span>
+          </div>
+
+          <Link
+            href="/analise"
+            className="inline-flex items-center text-xs md:text-sm font-poppins font-semibold text-gray-200 hover:text-[#FFC900] bg-white/5 hover:bg-white/10 border border-white/15 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all"
+          >
+            <span>Falar com especialista</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" size={16} className="ml-1 text-[#FFC900]" />
+          </Link>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-poppins font-normal tracking-tight leading-tight max-w-5xl mx-auto mb-8 text-[#0C1014]">
-          🍔 Fazemos <strong className="font-semibold text-[#0C1014]">Restaurantes</strong> quebrarem o <strong className="font-semibold text-[#0C1014]">Recorde de Faturamento</strong> com um Método Validado!
-        </h1>
+        {/* Hero Content Wrapper */}
+        <div className="my-auto py-4">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 sm:space-y-7 max-w-xl sm:max-w-2xl lg:max-w-2xl">
+            
+            {/* Top Badge (Smaller text size on mobile) */}
+            <div className="inline-flex items-center bg-black/80 border border-[#FFC900]/40 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full backdrop-blur-md shadow-lg max-w-full">
+              <span className="text-[10px] sm:text-xs md:text-sm font-poppins font-medium text-[#FFC900] tracking-wide leading-tight">
+                Assessoria de Crescimento para Restaurantes e Delivery
+              </span>
+            </div>
 
-        {/* Centered Glassmorphism Card with Left-Aligned Check Items */}
-        <div className="max-w-xl mx-auto mb-10 bg-black/10 backdrop-blur-md border border-black/15 rounded-2xl p-5 sm:p-6 shadow-xl">
-          <div className="space-y-2 text-left font-inter font-normal text-sm sm:text-base md:text-lg text-[#0C1014]">
-            <div className="flex items-center space-x-3">
-              <SolarIcon name="solar:check-circle-bold" className="text-[#0C1014] shrink-0" size={22} />
-              <span className="leading-snug">+Pedidos e Salão lotado durante a semana</span>
+            {/* Mobile Image (Displayed directly below the badge on mobile) */}
+            <div className="block lg:hidden relative w-full max-w-xs sm:max-w-sm mx-auto h-[280px] sm:h-[360px] rounded-3xl overflow-hidden my-2 shadow-2xl border border-white/10 bg-black">
+              <Image
+                src="/images/HERO-LP-GAP3-mobile.png"
+                alt="GAP3 Assessoria Mobile"
+                fill
+                priority
+                unoptimized
+                className="object-cover object-top"
+              />
             </div>
-            <div className="flex items-center space-x-3">
-              <SolarIcon name="solar:check-circle-bold" className="text-[#0C1014] shrink-0" size={22} />
-              <span className="leading-snug">Novos clientes todos os dias</span>
+
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-poppins font-bold tracking-tight leading-[1.15] text-white">
+              Mais pedidos,{" "}
+              <span className="text-[#FFC900]">salão cheio</span> e{" "}
+              <span className="text-[#FFC900]">lucro de verdade</span>. Todo mês, não só no fim de semana.
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg lg:text-xl font-inter font-normal text-gray-200 leading-relaxed">
+              A <strong className="text-white font-semibold">GAP3</strong> estrutura as vendas do seu restaurante com processo, acompanhamento semanal e crescimento previsível.
+            </p>
+
+            {/* Main Call To Action Button (3 words max on mobile) */}
+            <div className="pt-2 w-full sm:w-auto flex justify-center lg:justify-start">
+              <Link
+                href="/analise"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-poppins font-bold text-sm sm:text-lg md:text-xl py-3.5 px-6 sm:py-5 sm:px-10 rounded-full shadow-[0_0_35px_rgba(0,230,54,0.45)] hover:shadow-[0_0_45px_rgba(0,230,54,0.65)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 tracking-wide gap-2.5 border-0 outline-none"
+              >
+                <span className="block sm:hidden">Quero crescer agora</span>
+                <span className="hidden sm:block">Quero crescer com a GAP3</span>
+                <SolarIcon name="solar:arrow-right-bold" size={20} className="sm:text-[24px]" />
+              </Link>
             </div>
-            <div className="flex items-center space-x-3">
-              <SolarIcon name="solar:check-circle-bold" className="text-[#0C1014] shrink-0" size={22} />
-              <span className="leading-snug">Fortalecemos a recorrência</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <SolarIcon name="solar:check-circle-bold" className="text-[#0C1014] shrink-0" size={22} />
-              <span className="leading-snug">Estratégia Validada por +50 restaurantes</span>
-            </div>
+
           </div>
         </div>
 
-        {/* CTA Button in Inter Regular (font-normal) leading to /analise */}
-        <div className="flex justify-center mb-12">
-          <Link
-            href="/analise"
-            className="bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-inter font-normal text-lg md:text-xl py-4 px-8 sm:px-10 rounded-xl shadow-2xl transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center space-x-2 border border-black/10"
-          >
-            <span>Quero vender mais no meu restaurante</span>
-            <SolarIcon name="solar:top-right-arrow-linear" size={24} className="stroke-[2.5]" />
-          </Link>
-        </div>
       </div>
 
-      {/* Horizontal Marquee Ticker Ribbons with Fine Spacing */}
-      <div className="relative w-full overflow-hidden pointer-events-none z-20 space-y-2 pt-4 -mb-8">
-        {/* Ribbon 1: Black background with white text */}
+      {/* Horizontal Marquee Ticker Ribbons */}
+      <div className="relative w-full overflow-hidden pointer-events-none z-20 space-y-2 pt-8 sm:pt-10">
+        {/* Ribbon 1: Yellow */}
         <InfiniteRibbon
           repeat={8}
           duration={180}
           rotation={0}
-          className="bg-[#0C1014] text-white py-4 md:py-5 shadow-xl border-y border-white/15 font-poppins font-semibold text-sm sm:text-base md:text-lg lg:text-xl tracking-widest uppercase"
+          className="bg-[#F3A200] text-[#0C1014] py-3.5 md:py-4 shadow-xl border-y border-black/15 font-poppins font-semibold text-sm sm:text-base md:text-lg tracking-wide"
         >
           {tickerText}
         </InfiniteRibbon>
 
-        {/* Ribbon 2: White background with black text */}
+        {/* Ribbon 2: White */}
         <InfiniteRibbon
           repeat={8}
           duration={180}
           reverse={true}
           rotation={0}
-          className="bg-white text-[#0C1014] py-4 md:py-5 shadow-xl border-y border-black/15 font-poppins font-semibold text-sm sm:text-base md:text-lg lg:text-xl tracking-widest uppercase"
+          className="bg-white text-[#0C1014] py-3.5 md:py-4 shadow-xl border-y border-black/15 font-poppins font-semibold text-sm sm:text-base md:text-lg tracking-wide"
         >
           {tickerText}
         </InfiniteRibbon>
       </div>
+
     </section>
   );
 }
