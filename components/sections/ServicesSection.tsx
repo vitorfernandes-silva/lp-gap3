@@ -107,7 +107,7 @@ export function ServicesSection() {
           </Badge>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
-            A <span className="text-white">Assessoria GAP3</span> estrutura o marketing do seu restaurante com base na sua <span className="text-[#FFC900]">necessidade</span>
+            Estruturamos os <span className="text-[#FFC900]">processos comerciais</span> do seu restaurante com base na sua <span className="text-[#FFC900]">necessidade</span>
           </h2>
 
           <p className="text-sm sm:text-base text-gray-400 font-normal max-w-2xl mx-auto">
