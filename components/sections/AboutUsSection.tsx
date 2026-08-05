@@ -6,20 +6,20 @@ import { Badge } from "../ui/Badge";
 import { SolarIcon } from "../ui/SolarIcon";
 
 export function AboutUsSection() {
-  const agencyPoints = [
+  const commonPoints = [
     "Posta por postar, sem meta de venda",
-    "Não conhece o dia a dia de um restaurante",
-    "Entrega relatório de curtidas",
-    "Solução genérica para qualquer negócio",
-    "Some depois que fecha o contrato",
+    "Não conhece o dia a dia real de um restaurante",
+    "Foco em curtidas e métricas de vaidade",
+    "Ações genéricas e sem estratégia de crescimento",
+    "Trabalha no achismo, sem acompanhamento de métricas",
   ];
 
   const gap3Points = [
-    "Cada ação tem um objetivo: vender mais",
-    "Só atendemos restaurantes. Sabemos o que funciona",
-    "Acompanhamos faturamento, ticket e recorrência",
-    "Estratégia construída para a fase do seu restaurante",
-    "Acompanhamento semanal com seu time toda semana",
+    "Cada ação tem um objetivo claro: vender mais",
+    "Especialistas no mercado de restaurantes e delivery",
+    "Acompanhamos faturamento, ticket médio e recompra",
+    "Estratégia personalizada para a fase do seu negócio",
+    "Acompanhamento semanal e processo estruturado",
   ];
 
   return (
@@ -35,23 +35,23 @@ export function AboutUsSection() {
           </Badge>
           
           {/* Main Title */}
-          <h2 className="font-poppins font-bold text-white tracking-tight leading-tight mb-6">
+          <h2 className="font-poppins font-bold text-white tracking-tight leading-tight mb-4">
             <span className="block text-[32px] sm:text-4xl md:text-5xl leading-tight">
               O problema não é o seu restaurante.
             </span>
-            <span className="block text-[26px] sm:text-3xl md:text-4xl text-[#FFC900] mt-2.5 font-bold leading-tight">
-              É com quem você está tentando crescer.
+            <span className="block text-[24px] sm:text-3xl md:text-4xl text-[#FFC900] mt-2 font-bold leading-tight">
+              É crescer sem um método comercial validado.
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-gray-400 font-normal max-w-2xl mx-auto">
-            Veja na prática a diferença entre contratar posts de uma agência tradicional ou ter uma assessoria comercial focada em escalar o seu faturamento.
+            Veja a diferença entre agir no achismo ou ter uma assessoria focada em escalar o seu faturamento.
           </p>
         </div>
 
         {/* Comparative Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-          {/* Card 1: Agência Comum */}
+          {/* Card 1: Sem Assessoria Especializada */}
           <div className="bg-[#0C1014] border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between opacity-90 hover:opacity-100 transition-opacity">
             <div>
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
@@ -61,15 +61,15 @@ export function AboutUsSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-poppins font-bold text-white">
-                      Agência Comum
+                      Sem Assessoria Especializada
                     </h3>
-                    <p className="text-xs text-red-400 font-medium">Modelos antigos de marketing</p>
+                    <p className="text-xs text-red-400 font-medium">Fazer sozinho ou com agências genéricas</p>
                   </div>
                 </div>
               </div>
 
               <ul className="space-y-4">
-                {agencyPoints.map((point, idx) => (
+                {commonPoints.map((point, idx) => (
                   <li key={idx} className="flex items-start space-x-3 text-sm sm:text-base text-gray-300 font-normal">
                     <SolarIcon name="solar:close-circle-bold" className="text-red-400 shrink-0 mt-0.5" size={18} />
                     <span>{point}</span>
@@ -79,7 +79,7 @@ export function AboutUsSection() {
             </div>
 
             <div className="mt-8 pt-4 border-t border-white/10 text-xs sm:text-sm text-red-400/90 font-medium">
-              Resultado: Posts no feed, mas o caixa continua no vermelho.
+              Resultado: Muito esforço, mas o caixa continua instável e dependente de sorte.
             </div>
           </div>
 
@@ -126,11 +126,10 @@ export function AboutUsSection() {
         <div className="mt-14 text-center flex justify-center">
           <Link
             href="/analise"
-            className="inline-flex items-center justify-center gap-2.5 bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-poppins font-bold text-sm sm:text-base md:text-lg py-3.5 px-6 sm:py-4 sm:px-8 rounded-full shadow-[0_0_25px_rgba(0,230,54,0.35)] hover:shadow-[0_0_35px_rgba(0,230,54,0.55)] transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#1E8E1B] hover:bg-[#197816] text-white font-poppins font-bold text-sm sm:text-base md:text-lg py-3.5 px-6 sm:py-4 sm:px-8 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide"
           >
-            <span className="block sm:hidden">Quero crescer agora</span>
-            <span className="hidden sm:block">Quero crescer com a GAP3</span>
-            <SolarIcon name="solar:alt-arrow-right-bold" size={20} className="text-[#0C1014]" />
+            <span>Agendar demonstração gratuita</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" size={20} className="text-white" />
           </Link>
         </div>
 
@@ -138,3 +137,4 @@ export function AboutUsSection() {
     </section>
   );
 }
+

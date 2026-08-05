@@ -109,11 +109,10 @@ export function VisionSection() {
         <div className="mt-14 text-center flex justify-center">
           <Link
             href="/analise"
-            className="inline-flex items-center justify-center gap-2.5 bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-poppins font-bold text-sm sm:text-base md:text-lg py-3.5 px-6 sm:py-4 sm:px-8 rounded-full shadow-[0_0_25px_rgba(0,230,54,0.35)] hover:shadow-[0_0_35px_rgba(0,230,54,0.55)] transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#1E8E1B] hover:bg-[#197816] text-white font-poppins font-bold text-sm sm:text-base md:text-lg py-3.5 px-6 sm:py-4 sm:px-8 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide"
           >
-            <span className="block sm:hidden">Quero mais lucro</span>
-            <span className="hidden sm:block">Quero ter resultados previsíveis</span>
-            <SolarIcon name="solar:alt-arrow-right-bold" size={20} className="text-[#0C1014]" />
+            <span>Agendar demonstração gratuita</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" size={20} className="text-white" />
           </Link>
         </div>
 

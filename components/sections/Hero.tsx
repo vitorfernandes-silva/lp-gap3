@@ -15,7 +15,7 @@ export function Hero() {
       
       {/* Desktop Background Image (Only visible on lg screens) */}
       <Image
-        src="/images/HERO-LP-GAP3.png"
+        src="/images/HERO-LP-GAP3-nova.png"
         alt="GAP3 Assessoria Background"
         fill
         priority
@@ -44,10 +44,10 @@ export function Hero() {
 
           <Link
             href="/analise"
-            className="inline-flex items-center text-xs md:text-sm font-poppins font-semibold text-gray-200 hover:text-[#FFC900] bg-white/5 hover:bg-white/10 border border-white/15 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all"
+            className="inline-flex items-center text-xs md:text-sm font-poppins font-bold text-white bg-[#1E8E1B] hover:bg-[#197816] px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full transition-all"
           >
-            <span>Falar com especialista</span>
-            <SolarIcon name="solar:alt-arrow-right-bold" size={16} className="ml-1 text-[#FFC900]" />
+            <span>Agendar demonstração gratuita</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" size={16} className="ml-1 text-white" />
           </Link>
         </div>
 
@@ -76,9 +76,7 @@ export function Hero() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-5xl font-poppins font-bold tracking-tight leading-[1.15] text-white">
-              Mais pedidos,{" "}
-              <span className="text-[#FFC900]">salão cheio</span> e{" "}
-              <span className="text-[#FFC900]">lucro de verdade</span>. Todo mês, não só no fim de semana.
+              Em 40 min nós vamos mostrar <span className="text-[#FFC900]">aonde o seu restaurante está perdendo dinheiro</span>
             </h1>
 
             {/* Subtitle */}
@@ -86,15 +84,14 @@ export function Hero() {
               A <strong className="text-white font-semibold">GAP3</strong> estrutura as vendas do seu restaurante com processo, acompanhamento semanal e crescimento previsível.
             </p>
 
-            {/* Main Call To Action Button (3 words max on mobile) */}
+            {/* Main Call To Action Button */}
             <div className="pt-2 w-full sm:w-auto flex justify-center lg:justify-start">
               <Link
                 href="/analise"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#00E636] hover:bg-[#00FF38] text-[#0C1014] font-poppins font-bold text-sm sm:text-lg md:text-xl py-3.5 px-6 sm:py-5 sm:px-10 rounded-full shadow-[0_0_35px_rgba(0,230,54,0.45)] hover:shadow-[0_0_45px_rgba(0,230,54,0.65)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 tracking-wide gap-2.5 border-0 outline-none"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[#1E8E1B] hover:bg-[#197816] text-white font-poppins font-bold text-sm sm:text-lg md:text-xl py-3.5 px-6 sm:py-5 sm:px-10 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 tracking-wide gap-2.5 border-0 outline-none"
               >
-                <span className="block sm:hidden">Quero crescer agora</span>
-                <span className="hidden sm:block">Quero crescer com a GAP3</span>
-                <SolarIcon name="solar:arrow-right-bold" size={20} className="sm:text-[24px]" />
+                <span>Agendar demonstração gratuita</span>
+                <SolarIcon name="solar:arrow-right-bold" size={20} className="sm:text-[24px] text-white" />
               </Link>
             </div>
 
@@ -102,31 +99,6 @@ export function Hero() {
         </div>
 
       </div>
-
-      {/* Horizontal Marquee Ticker Ribbons */}
-      <div className="relative w-full overflow-hidden pointer-events-none z-20 space-y-2 pt-8 sm:pt-10">
-        {/* Ribbon 1: Yellow */}
-        <InfiniteRibbon
-          repeat={8}
-          duration={180}
-          rotation={0}
-          className="bg-[#F3A200] text-[#0C1014] py-3.5 md:py-4 shadow-xl border-y border-black/15 font-poppins font-semibold text-sm sm:text-base md:text-lg tracking-wide"
-        >
-          {tickerText}
-        </InfiniteRibbon>
-
-        {/* Ribbon 2: White */}
-        <InfiniteRibbon
-          repeat={8}
-          duration={180}
-          reverse={true}
-          rotation={0}
-          className="bg-white text-[#0C1014] py-3.5 md:py-4 shadow-xl border-y border-black/15 font-poppins font-semibold text-sm sm:text-base md:text-lg tracking-wide"
-        >
-          {tickerText}
-        </InfiniteRibbon>
-      </div>
-
     </section>
   );
 }

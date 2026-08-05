@@ -54,10 +54,10 @@ export function FinalCTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/analise"
-            className="inline-flex items-center justify-center bg-gap3-gold-gradient text-[#0C1014] font-inter font-normal py-5 px-10 text-xl md:text-2xl rounded-xl shadow-2xl hover:brightness-110 transition-all border border-[#FFC900]/30 w-full sm:w-auto"
+            className="inline-flex items-center justify-center bg-[#1E8E1B] hover:bg-[#197816] text-white font-poppins font-bold py-4 sm:py-5 px-8 sm:px-10 text-lg sm:text-xl md:text-2xl rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 tracking-wide w-full sm:w-auto"
           >
-            <span>Quero meu time GAP3 agora</span>
-            <SolarIcon name="solar:alt-arrow-right-bold" className="ml-2 text-current flex-shrink-0" size={28} />
+            <span>Agendar demonstração gratuita</span>
+            <SolarIcon name="solar:alt-arrow-right-bold" className="ml-2 text-white flex-shrink-0" size={24} />
           </Link>
         </div>
       </div>
