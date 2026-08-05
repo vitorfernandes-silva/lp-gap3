@@ -28,7 +28,10 @@ export function MethodSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-[#F3A200] text-[#0C1014] font-inter border-b border-black/10">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-[#000000] text-white font-inter border-b border-white/10">
+      {/* Background Radial Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#FFC900]/5 blur-[130px] pointer-events-none rounded-full" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
@@ -37,11 +40,11 @@ export function MethodSection() {
             Nossa metodologia
           </Badge>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight">
-            Método <span className="text-white">GAP3</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
+            Método <span className="text-[#FFC900]">GAP3</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-[#0C1014]/90 font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
             Essa é a metodologia exclusiva que utilizamos para transformar restaurantes em líderes de faturamento.
           </p>
         </div>
@@ -51,7 +54,7 @@ export function MethodSection() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-[#12161F] via-[#1A212D] to-[#0D1117] border border-white/15 hover:border-[#FFC900]/70 rounded-3xl p-7 sm:p-9 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.5)] flex flex-col justify-between group relative overflow-hidden text-white backdrop-blur-xl"
+              className="bg-gradient-to-br from-[#12161F] via-[#1A212D] to-[#0D1117] border border-[#FFC900]/40 hover:border-[#FFC900] rounded-3xl p-7 sm:p-9 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(255,201,0,0.15)] flex flex-col justify-between group relative overflow-hidden text-white backdrop-blur-xl"
             >
               {/* Top Accent Gradient Light on Hover */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFC900] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

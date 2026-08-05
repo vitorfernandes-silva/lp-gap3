@@ -10,62 +10,52 @@ export function ServicesSection() {
   const services = [
     {
       id: 1,
-      title: "CRM & Fidelização",
-      image: "/images/card1-lucro.jpg",
+      title: "Google Meu Negócio & TripAdvisor",
+      image: "/images/service_gmn.jpg",
       bullets: [
-        "Disparo de mensagens via WhatsApp",
-        "Reativação de clientes inativos",
-        "Fidelização e LTV",
+        "Otimização e SEO local para busca na sua região",
+        "Gestão estratégica de avaliações e reputação",
+        "Aumento expressivo de visibilidade para o salão",
       ],
     },
     {
       id: 2,
-      title: "Google Meu Negócio & TripAdvisor",
-      image: "/images/gmn.webp",
+      title: "Estratégia de Conteúdo",
+      image: "/images/service_content.jpg",
       bullets: [
-        "Otimização e SEO local",
-        "Gestão de avaliações",
-        "Aumento de visibilidade no salão",
+        "Estratégia editorial focada em Instagram e TikTok",
+        "Roteiros para vídeos virais que geram novos pedidos",
+        "Posicionamento de marca como referência local",
       ],
     },
     {
       id: 3,
-      title: "Assessoria de Conteúdo",
-      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
+      title: "Tráfego Pago",
+      image: "/images/service_ads.jpg",
       bullets: [
-        "Estratégia editorial para Insta/TikTok",
-        "Roteiros para vídeos virais",
-        "Posicionamento de marca",
+        "Campanhas de anúncios de alta conversão e ROI real",
+        "Gestão e análise semanal de dados para otimização",
+        "Metas semanais claras de faturamento e pedidos",
       ],
     },
     {
       id: 4,
-      title: "Tráfego Pago",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      title: "Otimização de Delivery",
+      image: "/images/service_delivery.jpg",
       bullets: [
-        "Campanhas de alta conversão",
-        "Análise de dados avançada",
-        "Metas semanais de faturamento",
+        "Análise e otimização de cardápios no iFood e 99Food",
+        "Estratégias avançadas de rankeamento nos apps",
+        "Melhoria na taxa de conversão dos seus itens",
       ],
     },
     {
       id: 5,
-      title: "Otimização de Delivery",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      title: "CRM & Fidelização",
+      image: "/images/service_crm.jpg",
       bullets: [
-        "Análise de cardápios no iFood",
-        "Estratégias de rankeamento",
-        "Melhoria na taxa de conversão",
-      ],
-    },
-    {
-      id: 6,
-      title: "Acompanhamento & Análises",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
-      bullets: [
-        "Reuniões de acompanhamento",
-        "Suporte via Grupo de WhatsApp",
-        "Relatórios de performance",
+        "Disparo inteligente de mensagens via WhatsApp",
+        "Reativação estratégica de clientes inativos",
+        "Aumento da taxa de recompra e fidelização de LTV",
       ],
     },
   ];
@@ -86,7 +76,7 @@ export function ServicesSection() {
           </Badge>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
-            Estruturamos os <span className="text-[#FFC900]">processos comerciais</span> do seu restaurante com base na sua <span className="text-[#FFC900]">necessidade</span>
+            5 soluções - 1 objetivo: <span className="text-[#FFC900]">Fazer seu restaurante vender mais todo mês.</span>
           </h2>
         </div>
       </div>
@@ -102,7 +92,7 @@ export function ServicesSection() {
         {/* Infinite Scrolling Track */}
         <div
           className="flex w-max whitespace-nowrap animate-marquee hover:[animation-play-state:paused]"
-          style={{ animationDuration: "35s" }}
+          style={{ animationDuration: "30s" }}
         >
           {marqueeServices.map((service, idx) => (
             <div
@@ -110,8 +100,8 @@ export function ServicesSection() {
               className="mx-3 w-[290px] sm:w-[340px] bg-[#0C1014] border border-gray-800 hover:border-[#FFC900]/50 rounded-2xl p-5 whitespace-normal flex flex-col justify-between shadow-xl transition-all duration-300 group shrink-0"
             >
               <div>
-                {/* Image Container */}
-                <div className="relative w-full h-[170px] sm:h-[200px] rounded-xl overflow-hidden mb-5 border border-white/10 bg-gray-900">
+                {/* Image Container with subtle black vignette overlay */}
+                <div className="relative w-full h-[170px] sm:h-[200px] rounded-xl overflow-hidden mb-5 border border-white/10 bg-black">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -119,7 +109,8 @@ export function ServicesSection() {
                     unoptimized
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C1014] via-transparent to-transparent opacity-60" />
+                  {/* Black Vignette Overlay */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.85)_100%)] pointer-events-none" />
                 </div>
 
                 {/* Card Title */}

@@ -76,7 +76,7 @@ export function Hero() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-5xl font-poppins font-bold tracking-tight leading-[1.15] text-white">
-              Em 40 min nós vamos mostrar <span className="text-[#FFC900]">aonde o seu restaurante está perdendo dinheiro</span>
+              Em <span className="text-[#FFC900]">40 min</span> nós vamos mostrar aonde o seu restaurante está <span className="text-[#FFC900]">perdendo dinheiro</span>
             </h1>
 
             {/* Subtitle */}
