@@ -11,7 +11,7 @@ export function Hero() {
     "+100 Clientes atendidos • +R$ 2MM gerados para nossos clientes • +60% de produtividade • Time 100% especializado em restaurantes • ";
 
   return (
-    <section className="relative bg-[#050608] text-white pt-4 sm:pt-6 lg:pt-8 pb-8 sm:pb-12 lg:pb-16 overflow-hidden border-b border-white/10 min-h-screen lg:min-h-screen flex flex-col justify-between">
+    <section className="relative bg-[#050608] text-white pt-4 sm:pt-6 lg:pt-8 pb-4 sm:pb-6 overflow-hidden min-h-screen lg:min-h-screen flex flex-col justify-between">
       
       {/* Desktop Background Image (Only visible on lg screens) */}
       <Image
@@ -75,7 +75,7 @@ export function Hero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-poppins font-bold tracking-tight leading-[1.15] text-white">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-poppins font-bold tracking-tight leading-[1.12] text-white">
               Em <span className="text-[#FFC900]">40 min</span> nós vamos mostrar aonde o seu restaurante está <span className="text-[#FFC900]">perdendo dinheiro</span>
             </h1>
 

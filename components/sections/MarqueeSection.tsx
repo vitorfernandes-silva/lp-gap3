@@ -8,7 +8,7 @@ export function MarqueeSection() {
     "+100 Clientes atendidos • +R$ 2MM gerados para nossos clientes • +60% de produtividade • Time 100% especializado em restaurantes • ";
 
   return (
-    <section className="bg-[#000000] py-4 overflow-hidden relative z-20 border-b border-white/10">
+    <section className="bg-[#050608] pb-8 pt-2 overflow-hidden relative z-20">
       <div className="relative w-full overflow-hidden pointer-events-none">
         {/* Ribbon: White */}
         <InfiniteRibbon

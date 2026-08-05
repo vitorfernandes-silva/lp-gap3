@@ -20,10 +20,10 @@ export function IdentificationSection() {
         
         {/* Section Header */}
         <div className="text-center mb-12 space-y-3 sm:space-y-4">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight max-w-5xl mx-auto">
             Se você se identifica com pelo menos 2 desses cenários
           </h2>
-          <p className="text-lg sm:text-2xl md:text-3xl font-poppins font-bold text-white max-w-4xl mx-auto drop-shadow-sm">
+          <p className="text-base sm:text-2xl md:text-3xl font-poppins font-bold text-white max-w-4xl mx-auto drop-shadow-sm">
             Nossa análise gratuita foi feita para você
           </p>
         </div>
