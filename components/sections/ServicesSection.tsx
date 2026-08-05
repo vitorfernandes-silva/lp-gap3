@@ -21,7 +21,7 @@ export function ServicesSection() {
     {
       id: 2,
       title: "Estratégia de Conteúdo",
-      image: "/images/service_content.jpg",
+      image: "/images/service-2.jpg",
       bullets: [
         "Estratégia editorial focada em Instagram e TikTok",
         "Roteiros para vídeos virais que geram novos pedidos",
@@ -31,7 +31,7 @@ export function ServicesSection() {
     {
       id: 3,
       title: "Tráfego Pago",
-      image: "/images/service_ads.jpg",
+      image: "/images/vision-5.jpg",
       bullets: [
         "Campanhas de anúncios de alta conversão e ROI real",
         "Gestão e análise semanal de dados para otimização",
@@ -41,7 +41,7 @@ export function ServicesSection() {
     {
       id: 4,
       title: "Otimização de Delivery",
-      image: "/images/service_delivery.jpg",
+      image: "/images/vision-3.jpg",
       bullets: [
         "Análise e otimização de cardápios no iFood e 99Food",
         "Estratégias avançadas de rankeamento nos apps",
@@ -75,8 +75,13 @@ export function ServicesSection() {
             O que fazemos?
           </Badge>
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
-            5 soluções - 1 objetivo: <span className="text-[#FFC900]">Fazer seu restaurante vender mais todo mês.</span>
+          <h2 className="font-poppins font-bold tracking-tight leading-tight">
+            <span className="block text-3xl sm:text-5xl md:text-6xl text-white font-bold">
+              5 soluções, 1 objetivo
+            </span>
+            <span className="block text-lg sm:text-2xl md:text-3xl text-[#FFC900] font-semibold mt-2.5">
+              Fazer seu restaurante vender mais todo mês.
+            </span>
           </h2>
         </div>
       </div>
