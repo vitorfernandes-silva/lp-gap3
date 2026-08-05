@@ -47,39 +47,7 @@ export function AboutUsSection() {
 
         {/* Comparative Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
-          {/* Card 1: Sem Assessoria Especializada */}
-          <div className="bg-[#0C1014] border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between opacity-90 hover:opacity-100 transition-opacity">
-            <div>
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 flex items-center justify-center font-bold">
-                    <SolarIcon name="solar:close-circle-bold" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-poppins font-bold text-white">
-                      Sem Assessoria Especializada
-                    </h3>
-                    <p className="text-xs text-red-400 font-medium">Fazer sozinho ou com agências genéricas</p>
-                  </div>
-                </div>
-              </div>
-
-              <ul className="space-y-4">
-                {commonPoints.map((point, idx) => (
-                  <li key={idx} className="flex items-start space-x-3 text-sm sm:text-base text-gray-300 font-normal">
-                    <SolarIcon name="solar:close-circle-bold" className="text-red-400 shrink-0 mt-0.5" size={18} />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-8 pt-4 border-t border-white/10 text-xs sm:text-sm text-red-400/90 font-medium">
-              Resultado: Muito esforço, mas o caixa continua instável e dependente de sorte.
-            </div>
-          </div>
-
-          {/* Card 2: GAP3 Assessoria */}
+          {/* Card 1: GAP3 Assessoria */}
           <div className="bg-gradient-to-br from-[#12161E] via-[#181E29] to-[#12161E] border-2 border-[#FFC900] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl relative shadow-[0_0_30px_rgba(255,201,0,0.15)]">
             {/* Top Highlight Ribbon */}
             <div className="absolute -top-3.5 right-6 sm:right-8 bg-[#FFC900] text-[#0C1014] text-xs font-poppins font-bold px-4 py-1 rounded-full shadow-lg tracking-wider">
@@ -114,6 +82,38 @@ export function AboutUsSection() {
             <div className="mt-8 pt-4 border-t border-[#FFC900]/30 text-xs sm:text-sm text-[#FFC900] font-semibold flex items-center space-x-2">
               <SolarIcon name="solar:star-bold" size={16} />
               <span>Resultado: Processos de vendas previsíveis e escala de faturamento todos os meses.</span>
+            </div>
+          </div>
+
+          {/* Card 2: Sem Assessoria Especializada */}
+          <div className="bg-[#0C1014] border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between opacity-90 hover:opacity-100 transition-opacity">
+            <div>
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 flex items-center justify-center font-bold">
+                    <SolarIcon name="solar:close-circle-bold" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-poppins font-bold text-white">
+                      Sem Assessoria Especializada
+                    </h3>
+                    <p className="text-xs text-red-400 font-medium">Fazer sozinho ou com agências genéricas</p>
+                  </div>
+                </div>
+              </div>
+
+              <ul className="space-y-4">
+                {commonPoints.map((point, idx) => (
+                  <li key={idx} className="flex items-start space-x-3 text-sm sm:text-base text-gray-300 font-normal">
+                    <SolarIcon name="solar:close-circle-bold" className="text-red-400 shrink-0 mt-0.5" size={18} />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-8 pt-4 border-t border-white/10 text-xs sm:text-sm text-red-400/90 font-medium">
+              Resultado: Muito esforço, mas o caixa continua instável e dependente de sorte.
             </div>
           </div>
         </div>
