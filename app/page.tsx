@@ -1,10 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
 import { MarqueeSection } from "@/components/sections/MarqueeSection";
 import { IdentificationSection } from "@/components/sections/IdentificationSection";
-import { AboutUsSection } from "@/components/sections/AboutUsSection";
 import { MethodSection } from "@/components/sections/MethodSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { VisionSection } from "@/components/sections/VisionSection";
+import { AboutUsSection } from "@/components/sections/AboutUsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { Footer } from "@/components/sections/Footer";
 
@@ -14,10 +14,10 @@ export default function Home() {
       <Hero />
       <MarqueeSection />
       <IdentificationSection />
-      <AboutUsSection />
       <MethodSection />
       <ServicesSection />
       <VisionSection />
+      <AboutUsSection />
       <FAQSection />
       <Footer />
     </main>
