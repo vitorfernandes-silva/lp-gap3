@@ -368,9 +368,6 @@ export default function AnalisePage() {
           {step === 5 && (
             <div className="space-y-6">
               <div>
-                <p className="text-sm font-normal text-[#A0A5B1] mb-1">
-                  {firstName}, precisamos de mais informações sobre a sua empresa
-                </p>
                 <h2 className="text-2xl sm:text-3xl font-poppins font-semibold text-white">
                   {firstName} quanto, em média, ela está faturando ao mês?*
                 </h2>
