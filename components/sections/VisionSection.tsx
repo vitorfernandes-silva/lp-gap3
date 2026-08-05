@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { Badge } from "../ui/Badge";
 import { SolarIcon } from "../ui/SolarIcon";
 
 export function VisionSection() {
@@ -46,35 +45,28 @@ export function VisionSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative bg-black text-white font-inter border-b border-white/10 overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#FFC900]/5 blur-[120px] pointer-events-none rounded-full" />
-
+    <section className="py-20 md:py-28 relative bg-white text-[#0C1014] font-inter border-b border-black/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
-          <Badge iconName="solar:stars-bold" className="mb-2">
-            Resultados previsíveis
-          </Badge>
-
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
-            É assim que fica o restaurante que escolhe <span className="text-[#FFC900]">crescer com método.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight">
+            É assim que fica o restaurante que escolhe <span className="text-[#D98600]">crescer com método.</span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-gray-400 font-normal max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
             Crescimento todo mês, decisões com número e menos dependência da sorte.
           </p>
         </div>
 
-        {/* 6 Cards Grid (No Images, Larger Titles) */}
+        {/* 6 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {cards.map((card) => (
             <div
               key={card.id}
-              className="bg-[#0C1014] border border-white/10 hover:border-[#FFC900]/60 rounded-3xl p-7 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(255,201,0,0.12)] flex flex-col justify-between group relative overflow-hidden"
+              className="bg-[#0C1014] border border-gray-800 hover:border-[#FFC900]/60 rounded-3xl p-7 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl flex flex-col justify-between group relative overflow-hidden text-white"
             >
               {/* Top accent light on hover */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFC900] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -85,7 +77,7 @@ export function VisionSection() {
                   <SolarIcon name={card.icon} size={30} />
                 </div>
 
-                {/* Título (Larger font size) */}
+                {/* Título */}
                 <h3 className="text-xl sm:text-2xl font-poppins font-bold text-white leading-snug mb-4 group-hover:text-[#FFC900] transition-colors">
                   {card.title}
                 </h3>
@@ -96,10 +88,9 @@ export function VisionSection() {
                 </p>
               </div>
 
-              {/* Bottom accent indicator */}
-              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-500 group-hover:text-[#FFC900] transition-colors">
+              {/* Bottom accent indicator (Without arrow icon) */}
+              <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 group-hover:text-[#FFC900] transition-colors">
                 <span className="font-mono text-[11px] tracking-wider text-[#FFC900]/80">Resultado #{card.id}</span>
-                <SolarIcon name="solar:alt-arrow-right-linear" size={16} className="transform group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           ))}

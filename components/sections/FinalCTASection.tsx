@@ -20,13 +20,6 @@ export function FinalCTASection() {
   return (
     <section className="py-16 md:py-24 bg-[#090C0F] border-t border-[#232B36] relative overflow-hidden font-inter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Availability Badge */}
-        <div className="mb-6 flex justify-center">
-          <Badge iconName="solar:user-check-bold" variant="gold">
-            Consultores GAP3 disponíveis agora
-          </Badge>
-        </div>
-
         {/* Title (Poppins Semibold) */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-semibold text-white tracking-tight leading-tight max-w-5xl mx-auto mb-6">
           Receba um <span className="text-gap3-gold-gradient">time exclusivo</span> para o seu restaurante

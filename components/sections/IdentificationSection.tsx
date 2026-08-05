@@ -15,21 +15,21 @@ export function IdentificationSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#0C1014] text-white relative overflow-hidden border-b border-white/10 font-inter">
-      {/* Subtle radial background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[380px] bg-[#FFC900]/5 blur-[140px] pointer-events-none rounded-full" />
-
+    <section className="py-16 md:py-24 bg-[#F3A200] text-[#0C1014] relative overflow-hidden border-b border-black/10 font-inter">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Title */}
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white tracking-tight leading-tight max-w-5xl mx-auto">
-            Se você se identifica com <span className="text-[#FFC900]">pelo menos dois</span> desses cenários, nossa análise gratuita foi feita para você.
+        {/* Section Header */}
+        <div className="text-center mb-12 space-y-3 sm:space-y-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#0C1014] tracking-tight leading-tight max-w-5xl mx-auto">
+            Se você se identifica com pelo menos 2 desses cenários
           </h2>
+          <p className="text-lg sm:text-2xl md:text-3xl font-poppins font-bold text-white max-w-4xl mx-auto drop-shadow-sm">
+            Nossa análise gratuita foi feita para você
+          </p>
         </div>
 
         {/* Checklist Container Card */}
-        <div className="bg-gradient-to-br from-[#12161F] via-[#161C26] to-[#0E1219] border border-white/15 rounded-3xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl relative group">
+        <div className="bg-gradient-to-br from-[#12161F] via-[#161C26] to-[#0E1219] border border-white/15 rounded-3xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-xl relative group text-white">
           {/* Top Accent Gradient Line */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFC900] to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
 

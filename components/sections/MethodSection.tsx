@@ -36,10 +36,6 @@ export function MethodSection() {
         
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
-          <Badge iconName="solar:diagram-up-bold" variant="gold" className="mb-2">
-            Nossa metodologia
-          </Badge>
-
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
             Método <span className="text-[#FFC900]">GAP3</span>
           </h2>

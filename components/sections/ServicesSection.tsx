@@ -71,10 +71,6 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-12">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto space-y-3 sm:space-y-4">
-          <Badge iconName="solar:box-minimalistic-bold" className="mb-2">
-            O que fazemos?
-          </Badge>
-
           <h2 className="font-poppins font-bold tracking-tight leading-tight">
             <span className="block text-3xl sm:text-5xl md:text-6xl text-white font-bold">
               5 soluções, 1 objetivo

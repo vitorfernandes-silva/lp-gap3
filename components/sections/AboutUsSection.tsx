@@ -30,10 +30,6 @@ export function AboutUsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <Badge iconName="solar:shield-star-bold" className="mb-4">
-            Nossa cultura
-          </Badge>
-          
           {/* Main Title */}
           <h2 className="font-poppins font-bold text-white tracking-tight leading-tight mb-4">
             <span className="block text-[32px] sm:text-4xl md:text-5xl leading-tight">

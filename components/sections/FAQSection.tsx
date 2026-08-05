@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Badge } from "../ui/Badge";
 import { SolarIcon } from "../ui/SolarIcon";
 
 export function FAQSection() {
@@ -45,13 +44,10 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-[#0C1014] border-t border-[#232B36] relative">
+    <section className="py-16 md:py-24 bg-[#000000] border-t border-white/10 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <Badge iconName="solar:question-circle-bold" className="mb-2">
-            Tira-dúvidas
-          </Badge>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-white tracking-tight leading-tight">
             Perguntas <span className="text-[#FFC900]">frequentes</span>
           </h2>
@@ -67,7 +63,7 @@ export function FAQSection() {
             return (
               <div
                 key={idx}
-                className="bg-[#151A20] border border-[#232B36] hover:border-[#FFC900]/40 rounded-2xl overflow-hidden transition-colors"
+                className="bg-[#12161F] border border-white/10 hover:border-[#FFC900]/40 rounded-2xl overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
@@ -84,7 +80,7 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-gray-300 leading-relaxed border-t border-[#232B36]/50 pt-4 bg-[#0C1014]/40 font-inter font-normal">
+                  <div className="px-6 pb-6 text-sm sm:text-base text-gray-300 leading-relaxed border-t border-white/10 pt-4 bg-[#080B0E]/60 font-inter font-normal">
                     {faq.answer}
                   </div>
                 )}
