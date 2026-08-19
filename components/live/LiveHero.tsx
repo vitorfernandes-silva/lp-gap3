@@ -18,47 +18,47 @@ export function LiveHero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          {/* Left Column: Copy & Details */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 sm:space-y-7">
+          {/* Left Column: Copy & Details (58-60% width) */}
+          <div className="lg:col-span-7 xl:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 sm:space-y-6">
             
             {/* GAP3 Logo above the badge */}
-            <Link href="/" className="inline-flex items-center space-x-3.5 group">
+            <Link href="/" className="inline-flex items-center space-x-3 group">
               <Image
                 src="/images/logo.png"
                 alt="GAP3 Assessoria Logo"
                 width={480}
                 height={135}
                 priority
-                className="h-20 sm:h-24 md:h-28 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform group-hover:scale-105"
               />
-              <span className="text-white font-poppins font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight">
+              <span className="text-white font-poppins font-bold text-3xl sm:text-4xl md:text-5xl tracking-tight">
                 GAP<span className="text-[#FFC900]">3</span>
               </span>
             </Link>
 
-            {/* Top Pill Badge (Normal Formatting) */}
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#1C2026] via-[#2A313D] to-[#1C2026] border border-[#FFC900]/40 px-4 py-2 rounded-full shadow-lg shadow-black/50">
+            {/* Top Pill Badge */}
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#1C2026] via-[#2A313D] to-[#1C2026] border border-[#FFC900]/40 px-4 py-1.5 rounded-full shadow-lg shadow-black/50">
               <span className="w-2 h-2 rounded-full bg-[#FFC900] animate-pulse"></span>
               <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wide">
                 Evento exclusivo para donos de restaurantes
               </span>
             </div>
 
-            {/* Main Headline (Increased size & normal formatting) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-poppins font-bold tracking-tight leading-[1.12] text-white">
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-poppins font-bold tracking-tight leading-[1.12] text-white">
               Os bastidores dos restaurantes que{" "}
               <span className="text-gap3-gold-gradient">crescem</span>
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg lg:text-xl font-inter font-normal text-gray-300 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base lg:text-lg font-inter font-normal text-gray-300 leading-relaxed max-w-2xl">
               As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca.
             </p>
 
-            {/* Event Key Details (Clean Icon + Text without card background, smaller typography) */}
-            <div className="w-full flex flex-col sm:flex-row flex-wrap items-center lg:items-start justify-center lg:justify-start gap-5 sm:gap-7 pt-1">
+            {/* Event Key Details (Clean Icon + Text without card background) */}
+            <div className="w-full flex flex-col sm:flex-row flex-wrap items-center lg:items-start justify-center lg:justify-start gap-4 sm:gap-6 pt-1">
               {/* Date & Time */}
               <div className="flex items-center space-x-2.5">
                 <div className="w-8 h-8 rounded-lg bg-[#FFC900]/10 border border-[#FFC900]/30 flex items-center justify-center text-[#FFC900] shrink-0">
@@ -95,8 +95,8 @@ export function LiveHero() {
 
           </div>
 
-          {/* Right Column: Larger High Converting Form Card */}
-          <div className="lg:col-span-6 xl:col-span-6 w-full max-w-xl mx-auto">
+          {/* Right Column: Proportional Form Card (Image reference matching) */}
+          <div className="lg:col-span-5 xl:col-span-5 w-full max-w-[460px] mx-auto lg:ml-auto lg:mr-0">
             <LiveForm id="hero-live-form" />
           </div>
 

@@ -162,31 +162,31 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
   return (
     <div
       id={id}
-      className="bg-[#14171C]/90 backdrop-blur-2xl border border-[#272C35] rounded-[36px] p-7 sm:p-9 md:p-10 shadow-2xl shadow-black/80 relative text-left w-full"
+      className="bg-[#14171C]/95 backdrop-blur-2xl border border-[#272C35] rounded-[28px] p-6 sm:p-7 shadow-2xl shadow-black/80 relative text-left w-full"
     >
       {/* Header inside Form Card */}
-      <div className="mb-6">
-        <h3 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight mb-2">
+      <div className="mb-4 sm:mb-5">
+        <h3 className="text-xl sm:text-2xl font-poppins font-bold text-white tracking-tight mb-1">
           Garanta sua vaga
         </h3>
-        <p className="text-sm sm:text-base text-gray-400 font-inter font-normal">
+        <p className="text-xs sm:text-sm text-gray-400 font-inter font-normal">
           Preencha e receba o link de acesso exclusivo da transmissão.
         </p>
       </div>
 
       {/* Form Error Banner */}
       {errorMessage && (
-        <div className="mb-5 p-3.5 rounded-xl bg-red-500/10 border border-red-500/40 text-red-300 text-xs sm:text-sm font-medium flex items-center space-x-2">
-          <SolarIcon name="solar:danger-triangle-bold" className="text-red-400 shrink-0" size={18} />
+        <div className="mb-4 p-3 rounded-xl bg-red-500/10 border border-red-500/40 text-red-300 text-xs font-medium flex items-center space-x-2">
+          <SolarIcon name="solar:danger-triangle-bold" className="text-red-400 shrink-0" size={16} />
           <span>{errorMessage}</span>
         </div>
       )}
 
       {/* Form Element */}
-      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5 font-inter text-left">
+      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5 font-inter text-left">
         {/* 1. Nome */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
+          <label className="block text-xs font-medium text-gray-300 mb-1">
             Nome
           </label>
           <input
@@ -196,13 +196,13 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu nome"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 2. E-mail */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
+          <label className="block text-xs font-medium text-gray-300 mb-1">
             E-mail
           </label>
           <input
@@ -212,20 +212,20 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu melhor e-mail"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 3. WhatsApp (Split exact Alpha style) */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
+          <label className="block text-xs font-medium text-gray-300 mb-1">
             WhatsApp
           </label>
-          <div className="flex items-center space-x-2.5">
+          <div className="flex items-center space-x-2">
             {/* Country prefix button/select */}
-            <div className="bg-[#1E232B] border border-[#2E3541] rounded-2xl px-3.5 py-3.5 sm:py-4 flex items-center justify-between space-x-2 shrink-0 cursor-default select-none text-white text-sm sm:text-base font-medium">
+            <div className="bg-[#1E232B] border border-[#2E3541] rounded-xl px-3 py-2.5 sm:py-3 flex items-center justify-between space-x-1.5 shrink-0 cursor-default select-none text-white text-xs sm:text-sm font-medium">
               <span className="font-semibold">BR +55</span>
-              <SolarIcon name="solar:alt-arrow-down-linear" size={16} className="text-gray-400" />
+              <SolarIcon name="solar:alt-arrow-down-linear" size={14} className="text-gray-400" />
             </div>
 
             {/* Input */}
@@ -236,14 +236,14 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               onChange={handlePhoneChange}
               placeholder="Digite seu melhor WhatsApp"
               required
-              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
             />
           </div>
         </div>
 
         {/* 4. Nome do restaurante */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
+          <label className="block text-xs font-medium text-gray-300 mb-1">
             Nome do restaurante
           </label>
           <input
@@ -253,13 +253,13 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite o nome do seu restaurante"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 5. Segmento do restaurante */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
+          <label className="block text-xs font-medium text-gray-300 mb-1">
             Segmento do restaurante
           </label>
           <div className="relative">
@@ -268,7 +268,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.segment}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
                 formData.segment ? "text-white" : "text-gray-500"
               }`}
             >
@@ -281,16 +281,16 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-              <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+              <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>
         </div>
 
         {/* 6. Faturamento mensal aproximado */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
-            Qual é o faturamento mensal aproximado do seu restaurante?
+          <label className="block text-xs font-medium text-gray-300 mb-1">
+            Qual é o faturamento mensal aproximado?
           </label>
           <div className="relative">
             <select
@@ -298,7 +298,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.monthlyRevenue}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
                 formData.monthlyRevenue ? "text-white" : "text-gray-500"
               }`}
             >
@@ -311,16 +311,16 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-              <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+              <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>
         </div>
 
         {/* 7. Principal Desafio */}
         <div>
-          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
-            Qual é o principal desafio do seu restaurante hoje?
+          <label className="block text-xs font-medium text-gray-300 mb-1">
+            Qual é o principal desafio hoje?
           </label>
           <div className="relative">
             <select
@@ -328,7 +328,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.mainChallenge}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
                 formData.mainChallenge ? "text-white" : "text-gray-500"
               }`}
             >
@@ -341,22 +341,22 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-              <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+              <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>
         </div>
 
         {/* CTA Button */}
-        <div className="pt-4">
+        <div className="pt-2.5 sm:pt-3">
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#FFAE00] hover:bg-[#F59E0B] active:bg-[#E58E00] text-[#0C1014] font-poppins font-bold text-base sm:text-lg md:text-xl py-4 sm:py-4.5 px-8 rounded-full shadow-xl shadow-[#FFAE00]/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full bg-[#FFAE00] hover:bg-[#F59E0B] active:bg-[#E58E00] text-[#0C1014] font-poppins font-bold text-sm sm:text-base py-3.5 px-6 rounded-full shadow-xl shadow-[#FFAE00]/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="flex items-center space-x-2">
-                <span className="w-5 h-5 border-2 border-[#0C1014] border-t-transparent rounded-full animate-spin"></span>
+                <span className="w-4 h-4 border-2 border-[#0C1014] border-t-transparent rounded-full animate-spin"></span>
                 <span>Garantindo vaga...</span>
               </span>
             ) : (
