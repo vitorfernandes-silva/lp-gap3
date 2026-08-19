@@ -64,7 +64,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
     "Outro",
   ];
 
-  // Helper phone mask for Brazilian numbers: (XX) XXXXX-XXXX or (XX) XXXX-XXXX
+  // Helper phone mask for Brazilian numbers: (XX) XXXXX-XXXX
   const formatPhone = (val: string) => {
     const numbers = val.replace(/\D/g, "").slice(0, 11);
     if (numbers.length <= 2) return numbers;
@@ -93,35 +93,34 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
     e.preventDefault();
     setErrorMessage("");
 
-    // Validations
     if (!formData.fullName.trim()) {
-      setErrorMessage("Por favor, preencha seu nome.");
+      setErrorMessage("Por favor, digite seu nome.");
       return;
     }
 
     const cleanPhone = formData.whatsapp.replace(/\D/g, "");
     if (!cleanPhone || cleanPhone.length < 10) {
-      setErrorMessage("Por favor, digite um WhatsApp válido com DDD.");
+      setErrorMessage("Por favor, digite seu melhor WhatsApp com DDD.");
       return;
     }
 
     if (!formData.email.trim() || !formData.email.includes("@")) {
-      setErrorMessage("Por favor, digite um e-mail válido.");
+      setErrorMessage("Por favor, digite seu melhor e-mail.");
       return;
     }
 
     if (!formData.restaurantName.trim()) {
-      setErrorMessage("Por favor, informe o nome do seu restaurante.");
+      setErrorMessage("Por favor, digite o nome do seu restaurante.");
       return;
     }
 
     if (!formData.segment) {
-      setErrorMessage("Por favor, selecione o segmento do seu restaurante.");
+      setErrorMessage("Por favor, selecione o segmento do restaurante.");
       return;
     }
 
     if (!formData.monthlyRevenue) {
-      setErrorMessage("Por favor, selecione a faixa de faturamento mensal.");
+      setErrorMessage("Por favor, selecione o faturamento mensal aproximado.");
       return;
     }
 
@@ -143,19 +142,17 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
         throw new Error("Erro na resposta do servidor");
       }
 
-      // Store contact name in localStorage or query parameter for thank you personalization
       if (typeof window !== "undefined") {
         try {
           sessionStorage.setItem("live_lead_name", formData.fullName.split(" ")[0]);
         } catch {
-          // ignore session storage fallback
+          // ignore
         }
       }
 
       router.push("/live/obrigado");
     } catch (err) {
       console.error("Erro ao enviar:", err);
-      // Even if network fails, route forward to let user enter the WhatsApp group
       router.push("/live/obrigado");
     } finally {
       setLoading(false);
@@ -165,18 +162,15 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
   return (
     <div
       id={id}
-      className="bg-[#12161E]/95 backdrop-blur-xl border border-[#2A323F] rounded-3xl p-6 sm:p-8 md:p-9 shadow-2xl shadow-black/80 relative overflow-hidden"
+      className="bg-[#14171C]/90 backdrop-blur-2xl border border-[#272C35] rounded-[32px] p-6 sm:p-8 md:p-9 shadow-2xl shadow-black/80 relative text-left"
     >
-      {/* Subtle top border accent glow */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FFC900]/80 to-transparent" />
-
       {/* Header inside Form Card */}
       <div className="mb-6">
-        <h3 className="text-xl sm:text-2xl font-poppins font-bold text-white tracking-tight mb-2">
-          Garanta sua vaga gratuita
+        <h3 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight mb-2">
+          Garanta sua vaga
         </h3>
-        <p className="text-xs sm:text-sm text-gray-400 font-inter">
-          Preencha os campos abaixo para receber o link de acesso exclusivo da transmissão.
+        <p className="text-sm text-gray-400 font-inter font-normal">
+          Preencha e receba o link de acesso exclusivo da transmissão.
         </p>
       </div>
 
@@ -192,8 +186,8 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
       <form onSubmit={handleSubmit} className="space-y-4 font-inter text-left">
         {/* 1. Nome */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            Nome Completo <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Nome
           </label>
           <input
             type="text"
@@ -202,36 +196,14 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu nome"
             required
-            className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm placeholder:text-gray-500 outline-none transition-all shadow-inner"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
-        {/* 2. WhatsApp */}
+        {/* 2. E-mail */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            WhatsApp <span className="text-[#FFC900]">*</span>
-          </label>
-          <div className="relative flex items-center">
-            <div className="absolute left-3.5 flex items-center space-x-1.5 pointer-events-none text-xs text-gray-400 border-r border-[#2D3644] pr-2.5">
-              <span>🇧🇷</span>
-              <span className="font-semibold text-gray-300">+55</span>
-            </div>
-            <input
-              type="tel"
-              name="whatsapp"
-              value={formData.whatsapp}
-              onChange={handlePhoneChange}
-              placeholder="(00) 00000-0000"
-              required
-              className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 pl-20 pr-4 text-white text-sm placeholder:text-gray-500 outline-none transition-all shadow-inner"
-            />
-          </div>
-        </div>
-
-        {/* 3. E-mail */}
-        <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            E-mail <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            E-mail
           </label>
           <input
             type="email"
@@ -240,14 +212,39 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu melhor e-mail"
             required
-            className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm placeholder:text-gray-500 outline-none transition-all shadow-inner"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
-        {/* 4. Nome do Restaurante */}
+        {/* 3. WhatsApp (Split exact Alpha style) */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            Nome do restaurante <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            WhatsApp
+          </label>
+          <div className="flex items-center space-x-2.5">
+            {/* Country prefix button/select */}
+            <div className="bg-[#1E232B] border border-[#2E3541] rounded-xl px-3.5 py-3.5 flex items-center justify-between space-x-2 shrink-0 cursor-default select-none text-white text-sm sm:text-base font-medium">
+              <span className="font-semibold">BR +55</span>
+              <SolarIcon name="solar:alt-arrow-down-linear" size={16} className="text-gray-400" />
+            </div>
+
+            {/* Input */}
+            <input
+              type="tel"
+              name="whatsapp"
+              value={formData.whatsapp}
+              onChange={handlePhoneChange}
+              placeholder="Digite seu melhor WhatsApp"
+              required
+              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            />
+          </div>
+        </div>
+
+        {/* 4. Nome do restaurante */}
+        <div>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Nome do restaurante
           </label>
           <input
             type="text"
@@ -256,14 +253,14 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite o nome do seu restaurante"
             required
-            className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm placeholder:text-gray-500 outline-none transition-all shadow-inner"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 5. Segmento do restaurante */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            Segmento do restaurante <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Segmento do restaurante
           </label>
           <div className="relative">
             <select
@@ -271,27 +268,29 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.segment}
               onChange={handleChange}
               required
-              className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm outline-none transition-all shadow-inner appearance-none cursor-pointer pr-10"
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+                formData.segment ? "text-white" : "text-gray-500"
+              }`}
             >
-              <option value="" disabled className="bg-[#181E27] text-gray-500">
-                Selecione o segmento
+              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+                Selecionar segmento
               </option>
               {segmentOptions.map((seg, idx) => (
-                <option key={idx} value={seg} className="bg-[#181E27] text-white">
+                <option key={idx} value={seg} className="bg-[#1E232B] text-white">
                   {seg}
                 </option>
               ))}
             </select>
-            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
               <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
             </div>
           </div>
         </div>
 
-        {/* 6. Faturamento Mensal Aproximado */}
+        {/* 6. Faturamento mensal aproximado */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            Qual é o faturamento mensal aproximado? <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Qual é o faturamento mensal aproximado do seu restaurante?
           </label>
           <div className="relative">
             <select
@@ -299,27 +298,29 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.monthlyRevenue}
               onChange={handleChange}
               required
-              className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm outline-none transition-all shadow-inner appearance-none cursor-pointer pr-10"
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+                formData.monthlyRevenue ? "text-white" : "text-gray-500"
+              }`}
             >
-              <option value="" disabled className="bg-[#181E27] text-gray-500">
-                Selecione a faixa de faturamento
+              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+                Selecionar faturamento
               </option>
               {revenueOptions.map((rev, idx) => (
-                <option key={idx} value={rev} className="bg-[#181E27] text-white">
+                <option key={idx} value={rev} className="bg-[#1E232B] text-white">
                   {rev}
                 </option>
               ))}
             </select>
-            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
               <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
             </div>
           </div>
         </div>
 
-        {/* 7. Principal Desafio do Restaurante */}
+        {/* 7. Principal Desafio */}
         <div>
-          <label className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-            Qual é o principal desafio hoje? <span className="text-[#FFC900]">*</span>
+          <label className="block text-sm font-medium text-gray-300 mb-2">
+            Qual é o principal desafio do seu restaurante hoje?
           </label>
           <div className="relative">
             <select
@@ -327,48 +328,41 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.mainChallenge}
               onChange={handleChange}
               required
-              className="w-full bg-[#181E27] border border-[#2D3644] focus:border-[#FFC900] focus:ring-1 focus:ring-[#FFC900] rounded-xl py-3 px-4 text-white text-sm outline-none transition-all shadow-inner appearance-none cursor-pointer pr-10"
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+                formData.mainChallenge ? "text-white" : "text-gray-500"
+              }`}
             >
-              <option value="" disabled className="bg-[#181E27] text-gray-500">
-                Selecione o principal desafio
+              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+                Selecionar desafio
               </option>
               {challengeOptions.map((desafio, idx) => (
-                <option key={idx} value={desafio} className="bg-[#181E27] text-white">
+                <option key={idx} value={desafio} className="bg-[#1E232B] text-white">
                   {desafio}
                 </option>
               ))}
             </select>
-            <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
               <SolarIcon name="solar:alt-arrow-down-linear" size={18} />
             </div>
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="pt-3">
+        {/* CTA Button (Exact Alpha style pill button in warm yellow/gold) */}
+        <div className="pt-4">
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gap3-gold-gradient hover:brightness-110 active:brightness-95 text-[#0C1014] font-poppins font-bold text-base sm:text-lg py-4 px-6 rounded-xl shadow-xl shadow-[#F3A200]/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed border border-[#FFC900]/40"
+            className="w-full bg-[#FFAE00] hover:bg-[#F59E0B] active:bg-[#E58E00] text-[#0C1014] font-poppins font-bold text-base sm:text-lg py-4 px-6 rounded-full shadow-xl shadow-[#FFAE00]/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="flex items-center space-x-2">
                 <span className="w-5 h-5 border-2 border-[#0C1014] border-t-transparent rounded-full animate-spin"></span>
-                <span>RESERVANDO SUA VAGA...</span>
+                <span>GARANTINDO VAGA...</span>
               </span>
             ) : (
-              <>
-                <span>GARANTIR MINHA VAGA</span>
-                <SolarIcon name="solar:arrow-right-bold" size={20} className="text-[#0C1014]" />
-              </>
+              <span>GARANTIR MINHA VAGA</span>
             )}
           </button>
-        </div>
-
-        {/* Security / Privacy microcopy */}
-        <div className="pt-2 flex items-center justify-center space-x-2 text-[11px] text-gray-400">
-          <SolarIcon name="solar:shield-check-bold" size={14} className="text-[#FFC900]" />
-          <span>Seus dados estão protegidos. Evento 100% online e gratuito.</span>
         </div>
       </form>
     </div>
