@@ -162,14 +162,14 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
   return (
     <div
       id={id}
-      className="bg-[#14171C]/90 backdrop-blur-2xl border border-[#272C35] rounded-[32px] p-6 sm:p-8 md:p-9 shadow-2xl shadow-black/80 relative text-left"
+      className="bg-[#14171C]/90 backdrop-blur-2xl border border-[#272C35] rounded-[36px] p-7 sm:p-9 md:p-10 shadow-2xl shadow-black/80 relative text-left w-full"
     >
       {/* Header inside Form Card */}
       <div className="mb-6">
         <h3 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight mb-2">
           Garanta sua vaga
         </h3>
-        <p className="text-sm text-gray-400 font-inter font-normal">
+        <p className="text-sm sm:text-base text-gray-400 font-inter font-normal">
           Preencha e receba o link de acesso exclusivo da transmissão.
         </p>
       </div>
@@ -183,10 +183,10 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
       )}
 
       {/* Form Element */}
-      <form onSubmit={handleSubmit} className="space-y-4 font-inter text-left">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5 font-inter text-left">
         {/* 1. Nome */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             Nome
           </label>
           <input
@@ -196,13 +196,13 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu nome"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 2. E-mail */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             E-mail
           </label>
           <input
@@ -212,18 +212,18 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite seu melhor e-mail"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 3. WhatsApp (Split exact Alpha style) */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             WhatsApp
           </label>
           <div className="flex items-center space-x-2.5">
             {/* Country prefix button/select */}
-            <div className="bg-[#1E232B] border border-[#2E3541] rounded-xl px-3.5 py-3.5 flex items-center justify-between space-x-2 shrink-0 cursor-default select-none text-white text-sm sm:text-base font-medium">
+            <div className="bg-[#1E232B] border border-[#2E3541] rounded-2xl px-3.5 py-3.5 sm:py-4 flex items-center justify-between space-x-2 shrink-0 cursor-default select-none text-white text-sm sm:text-base font-medium">
               <span className="font-semibold">BR +55</span>
               <SolarIcon name="solar:alt-arrow-down-linear" size={16} className="text-gray-400" />
             </div>
@@ -236,14 +236,14 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               onChange={handlePhoneChange}
               placeholder="Digite seu melhor WhatsApp"
               required
-              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
             />
           </div>
         </div>
 
         {/* 4. Nome do restaurante */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             Nome do restaurante
           </label>
           <input
@@ -253,13 +253,13 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
             onChange={handleChange}
             placeholder="Digite o nome do seu restaurante"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-white text-sm sm:text-base placeholder:text-gray-500 outline-none transition-all"
           />
         </div>
 
         {/* 5. Segmento do restaurante */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             Segmento do restaurante
           </label>
           <div className="relative">
@@ -268,7 +268,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.segment}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
                 formData.segment ? "text-white" : "text-gray-500"
               }`}
             >
@@ -289,7 +289,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
 
         {/* 6. Faturamento mensal aproximado */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             Qual é o faturamento mensal aproximado do seu restaurante?
           </label>
           <div className="relative">
@@ -298,7 +298,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.monthlyRevenue}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
                 formData.monthlyRevenue ? "text-white" : "text-gray-500"
               }`}
             >
@@ -319,7 +319,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
 
         {/* 7. Principal Desafio */}
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm sm:text-base font-medium text-gray-300 mb-2">
             Qual é o principal desafio do seu restaurante hoje?
           </label>
           <div className="relative">
@@ -328,7 +328,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
               value={formData.mainChallenge}
               onChange={handleChange}
               required
-              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-3.5 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
+              className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-2xl py-3.5 sm:py-4 px-4 text-sm sm:text-base outline-none transition-all appearance-none cursor-pointer pr-10 ${
                 formData.mainChallenge ? "text-white" : "text-gray-500"
               }`}
             >
@@ -347,20 +347,20 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
           </div>
         </div>
 
-        {/* CTA Button (Exact Alpha style pill button in warm yellow/gold) */}
+        {/* CTA Button */}
         <div className="pt-4">
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#FFAE00] hover:bg-[#F59E0B] active:bg-[#E58E00] text-[#0C1014] font-poppins font-bold text-base sm:text-lg py-4 px-6 rounded-full shadow-xl shadow-[#FFAE00]/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full bg-[#FFAE00] hover:bg-[#F59E0B] active:bg-[#E58E00] text-[#0C1014] font-poppins font-bold text-base sm:text-lg md:text-xl py-4 sm:py-4.5 px-8 rounded-full shadow-xl shadow-[#FFAE00]/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center space-x-2 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="flex items-center space-x-2">
                 <span className="w-5 h-5 border-2 border-[#0C1014] border-t-transparent rounded-full animate-spin"></span>
-                <span>GARANTINDO VAGA...</span>
+                <span>Garantindo vaga...</span>
               </span>
             ) : (
-              <span>GARANTIR MINHA VAGA</span>
+              <span>Garantir minha vaga</span>
             )}
           </button>
         </div>

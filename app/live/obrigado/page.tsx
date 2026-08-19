@@ -74,12 +74,12 @@ export default function LiveObrigadoPage() {
 
           {/* Attention Heading */}
           <div className="space-y-3">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-red-500/20 border border-red-500/50 text-red-300 text-xs sm:text-sm font-poppins font-bold uppercase tracking-wider">
-              ⚠️ Passo Obrigatório para Participar
+            <div className="inline-block px-4 py-1.5 rounded-full bg-red-500/20 border border-red-500/50 text-red-300 text-xs sm:text-sm font-poppins font-bold tracking-wide">
+              ⚠️ Passo obrigatório para participar
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold text-white tracking-tight leading-tight">
-              ATENÇÃO{userName ? `, ${userName.toUpperCase()}` : ""}: SUA INSCRIÇÃO AINDA TEM UM ÚLTIMO PASSO.
+              Atenção{userName ? `, ${userName}` : ""}: sua inscrição ainda tem um último passo.
             </h1>
 
             <p className="text-base sm:text-lg text-[#FFC900] font-poppins font-semibold max-w-xl mx-auto leading-relaxed">
@@ -114,10 +114,10 @@ export default function LiveObrigadoPage() {
               href={whatsappGroupUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white font-poppins font-bold text-lg sm:text-xl py-4 sm:py-5 px-8 rounded-2xl shadow-xl shadow-[#25D366]/30 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer space-x-3 tracking-wide border border-white/20"
+              className="w-full inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white font-poppins font-bold text-lg sm:text-xl py-4 sm:py-5 px-8 rounded-full shadow-xl shadow-[#25D366]/30 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer space-x-3 tracking-wide border border-white/20"
             >
               <SolarIcon name="solar:chat-round-call-bold" size={26} className="text-white shrink-0" />
-              <span>ENTRAR NO GRUPO DE AVISOS</span>
+              <span>Entrar no grupo de avisos</span>
             </a>
 
             <p className="text-xs sm:text-sm text-gray-400 font-inter">

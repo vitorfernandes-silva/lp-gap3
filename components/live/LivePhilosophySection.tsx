@@ -16,19 +16,19 @@ export function LivePhilosophySection() {
         <div className="text-center mb-6">
           <div className="inline-flex items-center space-x-2 bg-[#151A20] border border-[#2A323F] px-4 py-1.5 rounded-full shadow-sm">
             <SolarIcon name="solar:stars-minimalistic-bold" size={16} className="text-[#FFC900]" />
-            <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wider uppercase">
-              Visão Estratégica
+            <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wide">
+              Visão estratégica
             </span>
           </div>
         </div>
 
-        {/* Big Impact Headline */}
+        {/* Headline (Normal Formatting) */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight">
-            NÃO É SÓ SOBRE TRAZER MAIS CLIENTES.
+            Não é só sobre trazer mais clientes.
             <br />
             <span className="text-gap3-gold-gradient">
-              É SOBRE O QUE ACONTECE ANTES, DURANTE E DEPOIS DA PRIMEIRA COMPRA.
+              É sobre o que acontece antes, durante e depois da primeira compra.
             </span>
           </h2>
         </div>
