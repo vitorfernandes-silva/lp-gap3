@@ -59,15 +59,15 @@ export function LivePhilosophySection() {
             </p>
           </div>
 
-          {/* Golden Callout Box */}
-          <div className="mt-8 bg-gradient-to-br from-[#181E27] to-[#12161E] border-2 border-[#FFC900]/40 rounded-2xl p-6 sm:p-8 text-center shadow-lg relative">
-            <div className="inline-block px-3 py-1 bg-[#FFC900]/15 border border-[#FFC900]/30 rounded-full text-[#FFC900] text-xs font-poppins font-bold uppercase tracking-wider mb-3">
+          {/* Yellow Callout Box (Reduced width & Yellow Background) */}
+          <div className="mt-8 max-w-2xl mx-auto bg-[#FFAE00] rounded-2xl p-6 sm:p-8 text-center shadow-xl shadow-[#FFAE00]/20 relative">
+            <div className="inline-block px-3.5 py-1 bg-[#0C1014] text-[#FFC900] rounded-full text-xs font-poppins font-bold uppercase tracking-wider mb-3 shadow-sm">
               O que você vai aprender
             </div>
-            <p className="text-lg sm:text-2xl font-poppins font-medium text-gray-200 mb-2">
+            <p className="text-base sm:text-xl font-poppins font-semibold text-[#0C1014] mb-2 leading-snug">
               Não é uma aula sobre simplesmente colocar mais dinheiro em tráfego.
             </p>
-            <p className="text-xl sm:text-2xl md:text-3xl font-poppins font-bold text-[#FFC900] leading-snug">
+            <p className="text-lg sm:text-2xl font-poppins font-extrabold text-[#0C1014] leading-snug">
               É uma visão sobre as alavancas que fazem um restaurante crescer.
             </p>
           </div>
