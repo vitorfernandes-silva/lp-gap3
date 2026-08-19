@@ -57,42 +57,29 @@ export function LiveHero() {
               As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca.
             </p>
 
-            {/* Event Key Details: Mobile (Acesso centered on top + 2 columns below) / Desktop (Inline Row) */}
-            <div className="w-full flex flex-col items-center sm:flex-row sm:flex-wrap lg:items-start justify-center lg:justify-start gap-3 sm:gap-6 pt-1">
+            {/* Event Key Details: Styled exactly like the pill tags in Final CTA section */}
+            <div className="w-full flex flex-col items-center sm:flex-row sm:flex-wrap lg:items-start justify-center lg:justify-start gap-3 sm:gap-3.5 pt-1">
               
               {/* 1. Tag Acesso: 1st place and centered on mobile */}
-              <div className="flex items-center justify-center space-x-2.5 w-full sm:w-auto order-1 sm:order-3">
-                <div className="w-8 h-8 rounded-lg bg-[#00E636]/10 border border-[#00E636]/30 flex items-center justify-center text-[#00E636] shrink-0">
-                  <SolarIcon name="solar:check-circle-bold" size={16} />
-                </div>
-                <div className="text-left">
-                  <span className="block text-[10px] text-gray-400 font-inter font-medium leading-none mb-1">Acesso</span>
-                  <span className="text-xs sm:text-sm font-poppins font-bold text-white leading-none whitespace-nowrap">Online e gratuito</span>
+              <div className="w-full sm:w-auto flex justify-center order-1 sm:order-3">
+                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#00E636]/40 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#00E636] shadow-sm whitespace-nowrap">
+                  <SolarIcon name="solar:check-circle-bold" size={18} className="shrink-0" />
+                  <span>Online e gratuito</span>
                 </div>
               </div>
 
               {/* 2 & 3: Two columns side-by-side on mobile */}
-              <div className="w-full max-w-[340px] sm:max-w-none grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:w-auto order-2 sm:order-1 items-center justify-center">
+              <div className="w-full max-w-[380px] sm:max-w-none grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:w-auto order-2 sm:order-1 items-center justify-center">
                 {/* 2. Date & Time */}
-                <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-[#FFC900]/10 border border-[#FFC900]/30 flex items-center justify-center text-[#FFC900] shrink-0">
-                    <SolarIcon name="solar:calendar-date-bold" size={16} />
-                  </div>
-                  <div className="text-left">
-                    <span className="block text-[10px] text-gray-400 font-inter font-medium leading-none mb-1">Data e horário</span>
-                    <span className="text-xs sm:text-sm font-poppins font-bold text-white leading-none whitespace-nowrap">Quarta-feira | 19h</span>
-                  </div>
+                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#FFC900]/40 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#FFC900] shadow-sm whitespace-nowrap">
+                  <SolarIcon name="solar:calendar-date-bold" size={18} className="text-[#FFC900] shrink-0" />
+                  <span>Quarta-feira | 19h</span>
                 </div>
 
                 {/* 3. Google Meet */}
-                <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                    <GoogleMeetIcon size={16} />
-                  </div>
-                  <div className="text-left">
-                    <span className="block text-[10px] text-gray-400 font-inter font-medium leading-none mb-1">Transmissão</span>
-                    <span className="text-xs sm:text-sm font-poppins font-bold text-white leading-none whitespace-nowrap">Ao vivo | Meet</span>
-                  </div>
+                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#2D3440] px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-white shadow-sm whitespace-nowrap">
+                  <GoogleMeetIcon size={18} />
+                  <span>Ao vivo | Google Meet</span>
                 </div>
               </div>
 
@@ -100,7 +87,7 @@ export function LiveHero() {
 
           </div>
 
-          {/* Right Column: Proportional Form Card (Image reference matching) */}
+          {/* Right Column: Proportional Form Card */}
           <div className="lg:col-span-5 xl:col-span-5 w-full max-w-[460px] mx-auto lg:ml-auto lg:mr-0">
             <LiveForm id="hero-live-form" />
           </div>
