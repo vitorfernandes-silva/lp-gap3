@@ -23,17 +23,17 @@ export function LiveHero() {
           {/* Left Column: Copy & Details */}
           <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 sm:space-y-7">
             
-            {/* GAP3 Logo above the badge */}
-            <Link href="/" className="inline-flex items-center space-x-2.5 group">
+            {/* GAP3 Logo (3x larger) above the badge */}
+            <Link href="/" className="inline-flex items-center space-x-4 group mb-2">
               <Image
                 src="/images/logo.png"
                 alt="GAP3 Assessoria Logo"
-                width={160}
-                height={45}
+                width={480}
+                height={135}
                 priority
-                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-transform group-hover:scale-105"
               />
-              <span className="text-white font-poppins font-bold text-xl sm:text-2xl tracking-tight">
+              <span className="text-white font-poppins font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight">
                 GAP<span className="text-[#FFC900]">3</span>
               </span>
             </Link>
