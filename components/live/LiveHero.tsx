@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { SolarIcon } from "../ui/SolarIcon";
 import { GoogleMeetIcon } from "../ui/GoogleMeetIcon";
 import { LiveForm } from "./LiveForm";
 
 export function LiveHero() {
   return (
-    <section className="relative bg-[#0C1014] text-white pt-8 sm:pt-12 lg:pt-16 pb-14 sm:pb-20 overflow-hidden">
+    <section className="relative bg-[#0C1014] text-white pt-10 sm:pt-16 lg:pt-20 pb-14 sm:pb-20 overflow-hidden">
       {/* Background glow accents */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFC900]/10 rounded-full blur-3xl pointer-events-none -z-0" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#F3A200]/5 rounded-full blur-3xl pointer-events-none -z-0" />
@@ -19,8 +21,23 @@ export function LiveHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Copy & Details */}
-          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 sm:space-y-8">
+          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 sm:space-y-7">
             
+            {/* GAP3 Logo above the badge */}
+            <Link href="/" className="inline-flex items-center space-x-2.5 group">
+              <Image
+                src="/images/logo.png"
+                alt="GAP3 Assessoria Logo"
+                width={160}
+                height={45}
+                priority
+                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+              <span className="text-white font-poppins font-bold text-xl sm:text-2xl tracking-tight">
+                GAP<span className="text-[#FFC900]">3</span>
+              </span>
+            </Link>
+
             {/* Top Pill Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#1C2026] via-[#2A313D] to-[#1C2026] border border-[#FFC900]/40 px-4 py-2 rounded-full shadow-lg shadow-black/50">
               <span className="w-2 h-2 rounded-full bg-[#FFC900] animate-pulse"></span>

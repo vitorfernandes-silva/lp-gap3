@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { LiveHeader } from "@/components/live/LiveHeader";
 import { LiveHero } from "@/components/live/LiveHero";
 import { LiveTopicsSection } from "@/components/live/LiveTopicsSection";
 import { LivePhilosophySection } from "@/components/live/LivePhilosophySection";
@@ -22,7 +21,6 @@ export const metadata: Metadata = {
 export default function LivePage() {
   return (
     <main className="min-h-screen bg-[#0C1014] text-white flex flex-col selection:bg-[#FFC900] selection:text-[#0C1014]">
-      <LiveHeader />
       <LiveHero />
       <LiveTopicsSection />
       <LivePhilosophySection />

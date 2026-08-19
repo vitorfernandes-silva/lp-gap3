@@ -10,28 +10,24 @@ export function LiveTopicsSection() {
       title: "Como gerar demanda nos dias fracos",
       description:
         "Estratégias para aumentar o movimento e os pedidos durante a semana, sem depender apenas de sexta, sábado e domingo.",
-      icon: "solar:graph-up-bold",
     },
     {
       number: "02",
       title: "Como fazer seus clientes comprarem novamente",
       description:
         "Como trabalhar recompra e frequência para não precisar conquistar um cliente novo toda vez que quiser vender.",
-      icon: "solar:repeat-bold",
     },
     {
       number: "03",
       title: "Como vender mais sem deixar a margem pelo caminho",
       description:
         "Como precificação, logística, oferta e canais de venda interferem no quanto realmente sobra depois da venda.",
-      icon: "solar:wallet-money-bold",
     },
     {
       number: "04",
       title: "Como construir um crescimento mais previsível",
       description:
         "Como conectar aquisição, atendimento e recompra para reduzir a dependência de boca a boca, marketplaces e tráfego pago como única fonte de crescimento.",
-      icon: "solar:shield-star-bold",
     },
   ];
 
@@ -65,14 +61,14 @@ export function LiveTopicsSection() {
           </h2>
         </div>
 
-        {/* 4 Cards (Stacked / Clean layout inspired by Image 1) */}
+        {/* 4 Cards (Clean layout with left number pill, title without repetition, and no right icons) */}
         <div className="space-y-4 sm:space-y-5 mb-12">
           {topics.map((topic, idx) => (
             <div
               key={idx}
               className="bg-[#12161E] hover:bg-[#161C26] border border-[#232B36] hover:border-[#FFC900]/50 rounded-2xl p-5 sm:p-7 transition-all duration-300 group shadow-lg flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
             >
-              {/* Number Badge & Icon */}
+              {/* Number Badge Pill on the left */}
               <div className="flex items-center space-x-3 shrink-0">
                 <span className="w-12 h-12 rounded-xl bg-[#1A202A] border border-[#2F3746] group-hover:border-[#FFC900]/40 flex items-center justify-center font-poppins font-bold text-lg text-[#FFC900] shadow-sm transition-colors">
                   {topic.number}
@@ -82,16 +78,11 @@ export function LiveTopicsSection() {
               {/* Text Content */}
               <div className="flex-1 space-y-1.5">
                 <h3 className="text-lg sm:text-xl font-poppins font-bold text-white group-hover:text-[#FFC900] transition-colors leading-snug">
-                  {topic.number} — {topic.title}
+                  {topic.title}
                 </h3>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-normal">
                   {topic.description}
                 </p>
-              </div>
-
-              {/* Visual Indicator Icon */}
-              <div className="hidden md:flex w-10 h-10 rounded-full bg-[#181E27] items-center justify-center text-gray-400 group-hover:text-[#FFC900] group-hover:bg-[#FFC900]/10 transition-all shrink-0">
-                <SolarIcon name={topic.icon} size={20} />
               </div>
             </div>
           ))}
