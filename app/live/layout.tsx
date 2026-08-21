@@ -1,7 +1,7 @@
 import React from "react";
 import Script from "next/script";
 
-export default function LiveObrigadoLayout({
+export default function LiveLayout({
   children,
 }: {
   children: React.ReactNode;
