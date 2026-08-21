@@ -205,7 +205,7 @@ export default function AnalisePage() {
         {step === 1 && (
           <div className="space-y-6">
             <div>
-              <p className="text-sm font-normal text-gray-400 mb-2">
+              <p className="text-sm font-normal text-gray-300 mb-2">
                 É um prazer te receber aqui!
               </p>
               <h1 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight">
@@ -216,10 +216,11 @@ export default function AnalisePage() {
             <div>
               <input
                 type="text"
+                aria-label="Nome e sobrenome"
                 value={formData.fullName}
                 onChange={(e) => handleChange("fullName", e.target.value)}
                 placeholder="Digite seu nome e sobrenome"
-                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-500 focus:outline-none transition-colors font-normal shadow-sm"
+                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-400 focus:outline-none transition-colors font-normal shadow-sm"
                 autoFocus
                 onKeyDown={(e) => e.key === "Enter" && handleNextStep()}
               />
@@ -241,7 +242,7 @@ export default function AnalisePage() {
         {step === 2 && (
           <div className="space-y-6">
             <div>
-              <p className="text-sm font-normal text-gray-400 mb-2">
+              <p className="text-sm font-normal text-gray-300 mb-2">
                 Perfeito {firstName}, qual é o seu melhor e-mail?
               </p>
               <h2 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight">
@@ -252,10 +253,11 @@ export default function AnalisePage() {
             <div>
               <input
                 type="email"
+                aria-label="E-mail"
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
                 placeholder="Digite seu e-mail"
-                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-500 focus:outline-none transition-colors font-normal shadow-sm"
+                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-400 focus:outline-none transition-colors font-normal shadow-sm"
                 autoFocus
                 onKeyDown={(e) => e.key === "Enter" && handleNextStep()}
               />
@@ -283,7 +285,7 @@ export default function AnalisePage() {
         {step === 3 && (
           <div className="space-y-6">
             <div>
-              <p className="text-sm font-normal text-gray-400 mb-2">
+              <p className="text-sm font-normal text-gray-300 mb-2">
                 Perfeito {firstName}, seu email já está conosco
               </p>
               <h2 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight">
@@ -292,15 +294,16 @@ export default function AnalisePage() {
             </div>
 
             <div className="relative flex items-center">
-              <div className="absolute left-5 flex items-center space-x-1.5 pointer-events-none">
+              <div className="absolute left-5 flex items-center space-x-1.5 pointer-events-none" aria-hidden="true">
                 <span className="text-xl">🇧🇷</span>
               </div>
               <input
                 type="tel"
+                aria-label="WhatsApp com DDD"
                 value={formData.whatsapp}
                 onChange={(e) => handleChange("whatsapp", e.target.value)}
                 placeholder="Digite seu número com DDD"
-                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 pl-14 pr-5 text-white text-base placeholder:text-gray-500 focus:outline-none transition-colors font-normal shadow-sm"
+                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 pl-14 pr-5 text-white text-base placeholder:text-gray-400 focus:outline-none transition-colors font-normal shadow-sm"
                 autoFocus
                 onKeyDown={(e) => e.key === "Enter" && handleNextStep()}
               />
@@ -328,7 +331,7 @@ export default function AnalisePage() {
         {step === 4 && (
           <div className="space-y-6">
             <div>
-              <p className="text-sm font-normal text-gray-400 mb-2">
+              <p className="text-sm font-normal text-gray-300 mb-2">
                 Agora, vamos falar sobre o seu negócio...
               </p>
               <h2 className="text-2xl sm:text-3xl font-poppins font-bold text-white tracking-tight">
@@ -339,10 +342,11 @@ export default function AnalisePage() {
             <div>
               <input
                 type="text"
+                aria-label="Nome da empresa"
                 value={formData.companyName}
                 onChange={(e) => handleChange("companyName", e.target.value)}
                 placeholder="Não tenho ainda"
-                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-500 focus:outline-none transition-colors font-normal shadow-sm"
+                className="w-full bg-[#181C23] border border-[#2D3440] focus:border-[#FFC900] rounded-xl py-4 px-5 text-white text-base placeholder:text-gray-400 focus:outline-none transition-colors font-normal shadow-sm"
                 autoFocus
                 onKeyDown={(e) => e.key === "Enter" && handleNextStep()}
               />

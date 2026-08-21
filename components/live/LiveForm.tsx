@@ -166,17 +166,17 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
     >
       {/* Header inside Form Card */}
       <div className="mb-4 sm:mb-5">
-        <h3 className="text-xl sm:text-2xl font-poppins font-bold text-white tracking-tight mb-1">
+        <h2 className="text-xl sm:text-2xl font-poppins font-bold text-white tracking-tight mb-1">
           Garanta sua vaga
-        </h3>
-        <p className="text-xs sm:text-sm text-gray-400 font-inter font-normal">
+        </h2>
+        <p className="text-xs sm:text-sm text-gray-300 font-inter font-normal">
           Preencha e receba o link de acesso exclusivo da transmissão.
         </p>
       </div>
 
       {/* Form Error Banner */}
       {errorMessage && (
-        <div className="mb-4 p-3 rounded-xl bg-red-500/10 border border-red-500/40 text-red-300 text-xs font-medium flex items-center space-x-2">
+        <div className="mb-4 p-3 rounded-xl bg-red-500/10 border border-red-500/40 text-red-300 text-xs font-medium flex items-center space-x-2" role="alert">
           <SolarIcon name="solar:danger-triangle-bold" className="text-red-400 shrink-0" size={16} />
           <span>{errorMessage}</span>
         </div>
@@ -186,93 +186,101 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
       <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5 font-inter text-left">
         {/* 1. Nome */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-fullName`} className="block text-xs font-medium text-gray-200 mb-1">
             Nome
           </label>
           <input
+            id={`${id}-fullName`}
             type="text"
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
             placeholder="Digite seu nome"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
+            autoComplete="name"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-400 outline-none transition-all"
           />
         </div>
 
         {/* 2. E-mail */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-email`} className="block text-xs font-medium text-gray-200 mb-1">
             E-mail
           </label>
           <input
+            id={`${id}-email`}
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             placeholder="Digite seu melhor e-mail"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
+            autoComplete="email"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-400 outline-none transition-all"
           />
         </div>
 
         {/* 3. WhatsApp (Split exact Alpha style) */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-whatsapp`} className="block text-xs font-medium text-gray-200 mb-1">
             WhatsApp
           </label>
           <div className="flex items-center space-x-2">
             {/* Country prefix button/select */}
-            <div className="bg-[#1E232B] border border-[#2E3541] rounded-xl px-3 py-2.5 sm:py-3 flex items-center justify-between space-x-1.5 shrink-0 cursor-default select-none text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#1E232B] border border-[#2E3541] rounded-xl px-3 py-2.5 sm:py-3 flex items-center justify-between space-x-1.5 shrink-0 cursor-default select-none text-white text-xs sm:text-sm font-medium" aria-hidden="true">
               <span className="font-semibold">BR +55</span>
-              <SolarIcon name="solar:alt-arrow-down-linear" size={14} className="text-gray-400" />
+              <SolarIcon name="solar:alt-arrow-down-linear" size={14} className="text-gray-300" />
             </div>
 
             {/* Input */}
             <input
+              id={`${id}-whatsapp`}
               type="tel"
               name="whatsapp"
               value={formData.whatsapp}
               onChange={handlePhoneChange}
               placeholder="Digite seu melhor WhatsApp"
               required
-              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
+              autoComplete="tel"
+              className="flex-1 min-w-0 bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-400 outline-none transition-all"
             />
           </div>
         </div>
 
         {/* 4. Nome do restaurante */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-restaurantName`} className="block text-xs font-medium text-gray-200 mb-1">
             Nome do restaurante
           </label>
           <input
+            id={`${id}-restaurantName`}
             type="text"
             name="restaurantName"
             value={formData.restaurantName}
             onChange={handleChange}
             placeholder="Digite o nome do seu restaurante"
             required
-            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-500 outline-none transition-all"
+            className="w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-white text-xs sm:text-sm placeholder:text-gray-400 outline-none transition-all"
           />
         </div>
 
         {/* 5. Segmento do restaurante */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-segment`} className="block text-xs font-medium text-gray-200 mb-1">
             Segmento do restaurante
           </label>
           <div className="relative">
             <select
+              id={`${id}-segment`}
               name="segment"
               value={formData.segment}
               onChange={handleChange}
               required
               className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
-                formData.segment ? "text-white" : "text-gray-500"
+                formData.segment ? "text-white" : "text-gray-400"
               }`}
             >
-              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+              <option value="" disabled className="bg-[#1E232B] text-gray-400">
                 Selecionar segmento
               </option>
               {segmentOptions.map((seg, idx) => (
@@ -281,7 +289,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-300" aria-hidden="true">
               <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>
@@ -289,20 +297,21 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
 
         {/* 6. Faturamento mensal aproximado */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-monthlyRevenue`} className="block text-xs font-medium text-gray-200 mb-1">
             Qual é o faturamento mensal aproximado?
           </label>
           <div className="relative">
             <select
+              id={`${id}-monthlyRevenue`}
               name="monthlyRevenue"
               value={formData.monthlyRevenue}
               onChange={handleChange}
               required
               className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
-                formData.monthlyRevenue ? "text-white" : "text-gray-500"
+                formData.monthlyRevenue ? "text-white" : "text-gray-400"
               }`}
             >
-              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+              <option value="" disabled className="bg-[#1E232B] text-gray-400">
                 Selecionar faturamento
               </option>
               {revenueOptions.map((rev, idx) => (
@@ -311,7 +320,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-300" aria-hidden="true">
               <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>
@@ -319,20 +328,21 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
 
         {/* 7. Principal Desafio */}
         <div>
-          <label className="block text-xs font-medium text-gray-300 mb-1">
+          <label htmlFor={`${id}-mainChallenge`} className="block text-xs font-medium text-gray-200 mb-1">
             Qual é o principal desafio hoje?
           </label>
           <div className="relative">
             <select
+              id={`${id}-mainChallenge`}
               name="mainChallenge"
               value={formData.mainChallenge}
               onChange={handleChange}
               required
               className={`w-full bg-[#1E232B] border border-[#2E3541] focus:border-[#FFAE00] focus:ring-1 focus:ring-[#FFAE00] rounded-xl py-2.5 sm:py-3 px-3.5 text-xs sm:text-sm outline-none transition-all appearance-none cursor-pointer pr-9 ${
-                formData.mainChallenge ? "text-white" : "text-gray-500"
+                formData.mainChallenge ? "text-white" : "text-gray-400"
               }`}
             >
-              <option value="" disabled className="bg-[#1E232B] text-gray-500">
+              <option value="" disabled className="bg-[#1E232B] text-gray-400">
                 Selecionar desafio
               </option>
               {challengeOptions.map((desafio, idx) => (
@@ -341,7 +351,7 @@ export function LiveForm({ id = "live-form" }: { id?: string }) {
                 </option>
               ))}
             </select>
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-300" aria-hidden="true">
               <SolarIcon name="solar:alt-arrow-down-linear" size={16} />
             </div>
           </div>

@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import Link from "next/link";
 import { SolarIcon } from "../ui/SolarIcon";
 
 export function LiveTopicsSection() {
@@ -30,15 +29,6 @@ export function LiveTopicsSection() {
         "Como conectar aquisição, atendimento e recompra para reduzir a dependência de boca a boca, marketplaces e tráfego pago como única fonte de crescimento.",
     },
   ];
-
-  const scrollToForm = () => {
-    const formElement = document.getElementById("hero-live-form");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      const firstInput = formElement.querySelector("input");
-      if (firstInput) firstInput.focus();
-    }
-  };
 
   return (
     <section className="py-16 sm:py-24 bg-[#090C0F] border-t border-[#1F252E] relative overflow-hidden font-inter">
@@ -90,14 +80,14 @@ export function LiveTopicsSection() {
 
         {/* CTA Button */}
         <div className="text-center pt-2">
-          <button
-            onClick={scrollToForm}
+          <Link
+            href="#hero-live-form"
             className="inline-flex items-center justify-center bg-gap3-gold-gradient hover:brightness-110 text-[#0C1014] font-poppins font-bold text-base sm:text-xl py-4 sm:py-5 px-8 sm:px-12 rounded-xl shadow-xl shadow-[#F3A200]/25 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer space-x-2 tracking-wide border border-[#FFC900]/40 w-full sm:w-auto"
           >
             <span>QUERO PARTICIPAR GRATUITAMENTE</span>
             <SolarIcon name="solar:arrow-right-bold" size={22} className="text-[#0C1014]" />
-          </button>
-          <p className="text-xs text-gray-400 mt-3 font-inter">
+          </Link>
+          <p className="text-xs text-gray-300 mt-3 font-inter">
             Apenas 1 hora de encontro • 100% online pelo Google Meet
           </p>
         </div>

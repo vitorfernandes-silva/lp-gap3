@@ -107,7 +107,7 @@ export function ServicesSection() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    unoptimized
+                    sizes="(max-width: 640px) 290px, 340px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Black Vignette Overlay */}

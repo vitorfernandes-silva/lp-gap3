@@ -15,11 +15,11 @@ export function Hero() {
       
       {/* Desktop Background Image (Only visible on lg screens) */}
       <Image
-        src="/images/HERO-LP-GAP3-nova.png"
+        src="/images/HERO-LP-GAP3-nova.webp"
         alt="GAP3 Assessoria Background"
         fill
         priority
-        unoptimized
+        sizes="(min-width: 1024px) 100vw, 1px"
         className="hidden lg:block object-cover object-center pointer-events-none z-0"
       />
 
@@ -65,11 +65,11 @@ export function Hero() {
             {/* Mobile Image (Displayed directly below the badge on mobile) */}
             <div className="block lg:hidden relative w-full max-w-xs sm:max-w-sm mx-auto h-[280px] sm:h-[360px] rounded-3xl overflow-hidden my-2 shadow-2xl border border-white/10 bg-black">
               <Image
-                src="/images/HERO-LP-GAP3-mobile.png"
+                src="/images/HERO-LP-GAP3-mobile.webp"
                 alt="GAP3 Assessoria Mobile"
                 fill
                 priority
-                unoptimized
+                sizes="(max-width: 768px) 384px, 1px"
                 className="object-cover object-top"
               />
             </div>

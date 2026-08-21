@@ -36,7 +36,7 @@ export function CustomPlansSection() {
                 src="/images/Imagem.png.webp"
                 alt="Planos Personalizados GAP3"
                 fill
-                unoptimized
+                sizes="(max-width: 1024px) 384px, 1px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -67,7 +67,7 @@ export function CustomPlansSection() {
               src="/images/Imagem.png.webp"
               alt="Planos Personalizados GAP3"
               fill
-              unoptimized
+              sizes="(min-width: 1024px) 50vw, 1px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />

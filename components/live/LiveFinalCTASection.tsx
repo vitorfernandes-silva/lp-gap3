@@ -1,19 +1,9 @@
-"use client";
-
 import React from "react";
+import Link from "next/link";
 import { SolarIcon } from "../ui/SolarIcon";
 import { GoogleMeetIcon } from "../ui/GoogleMeetIcon";
 
 export function LiveFinalCTASection() {
-  const scrollToForm = () => {
-    const formElement = document.getElementById("hero-live-form");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      const firstInput = formElement.querySelector("input");
-      if (firstInput) firstInput.focus();
-    }
-  };
-
   return (
     <section className="py-16 sm:py-24 bg-[#090C0F] border-t border-[#1F252E] relative overflow-hidden font-inter">
       {/* Background glow */}
@@ -58,15 +48,15 @@ export function LiveFinalCTASection() {
 
         {/* Big CTA Button */}
         <div className="flex flex-col items-center justify-center">
-          <button
-            onClick={scrollToForm}
+          <Link
+            href="#hero-live-form"
             className="w-full sm:w-auto inline-flex items-center justify-center bg-gap3-gold-gradient hover:brightness-110 active:brightness-95 text-[#0C1014] font-poppins font-bold text-lg sm:text-xl md:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-full shadow-2xl shadow-[#F3A200]/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer space-x-3 tracking-wide border border-[#FFC900]/40"
           >
             <span>Garantir minha vaga</span>
             <SolarIcon name="solar:arrow-right-bold" size={24} className="text-[#0C1014]" />
-          </button>
+          </Link>
 
-          <p className="text-xs text-gray-400 mt-4 font-inter">
+          <p className="text-xs text-gray-300 mt-4 font-inter">
             🔒 Inscrição rápida e gratuita • Não perca a transmissão ao vivo
           </p>
         </div>

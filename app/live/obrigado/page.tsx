@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,7 +53,7 @@ export default function LiveObrigadoPage() {
           <p>
             Para receber o link da aula ao vivo e os materiais exclusivos, entre agora no grupo de avisos no WhatsApp. É por lá que enviamos tudo com antecedência.
           </p>
-          <p className="text-xs sm:text-sm text-gray-400">
+          <p className="text-xs sm:text-sm text-gray-300">
             O encontro acontece <strong className="text-white font-semibold">quarta-feira, dia 26/08 às 19h, ao vivo pelo Google Meet</strong>.
           </p>
         </div>
@@ -74,12 +72,12 @@ export default function LiveObrigadoPage() {
         </div>
 
         {/* Trust & Privacy Microcopy with Divider */}
-        <div className="pt-6 border-t border-[#222B3A] flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-400 font-inter">
+        <div className="pt-6 border-t border-[#222B3A] flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-300 font-inter">
           <div className="flex items-center space-x-2">
             <SolarIcon name="solar:shield-check-bold" size={18} className="text-[#FFC900] shrink-0" />
             <span>Grupo Silencioso (Somente Administradores)</span>
           </div>
-          <span className="hidden sm:inline text-gray-600">•</span>
+          <span className="hidden sm:inline text-gray-500">•</span>
           <div className="flex items-center space-x-2">
             <SolarIcon name="solar:check-circle-bold" size={18} className="text-[#00C853] shrink-0" />
             <span>Sem SPAM, enviamos apenas os links e avisos</span>
@@ -89,7 +87,7 @@ export default function LiveObrigadoPage() {
       </div>
 
       {/* Simple Footer Note */}
-      <div className="text-center mt-6 text-xs text-gray-600 relative z-10">
+      <div className="text-center mt-6 text-xs text-gray-400 relative z-10">
         GAP3 Assessoria • Soluções de Crescimento para Food Services
       </div>
     </main>

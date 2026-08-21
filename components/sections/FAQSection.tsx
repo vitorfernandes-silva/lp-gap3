@@ -67,6 +67,8 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${idx}`}
                   className="w-full py-5 px-6 text-left flex items-center justify-between font-poppins font-bold text-base sm:text-lg text-white hover:text-[#FFC900] transition-colors focus:outline-none"
                 >
                   <span className="pr-4">{faq.question}</span>
@@ -80,7 +82,10 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-gray-300 leading-relaxed border-t border-white/10 pt-4 bg-[#080B0E]/60 font-inter font-normal">
+                  <div
+                    id={`faq-answer-${idx}`}
+                    className="px-6 pb-6 text-sm sm:text-base text-gray-300 leading-relaxed border-t border-white/10 pt-4 bg-[#080B0E]/60 font-inter font-normal"
+                  >
                     {faq.answer}
                   </div>
                 )}
