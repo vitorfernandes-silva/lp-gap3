@@ -38,11 +38,11 @@ export function LiveHero() {
               </span>
             </Link>
 
-            {/* Top Pill Badge with Date */}
+            {/* Top Pill Badge */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#1C2026] via-[#2A313D] to-[#1C2026] border border-[#FFC900]/40 px-4 py-1.5 rounded-full shadow-lg shadow-black/50">
               <span className="w-2 h-2 rounded-full bg-[#FFC900] animate-pulse"></span>
               <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wide">
-                26/08 • Quarta-feira às 19h | Evento exclusivo para donos de restaurantes
+                Evento 100% gratuito para donos de restaurantes e delivery
               </span>
             </div>
 
@@ -52,12 +52,12 @@ export function LiveHero() {
               <span className="text-gap3-gold-gradient">crescem</span>
             </h1>
 
-            {/* Description with Date */}
+            {/* Description */}
             <p className="text-sm sm:text-base lg:text-lg font-inter font-normal text-gray-300 leading-relaxed max-w-2xl">
-              As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca. Encontro ao vivo no dia <strong className="text-[#FFC900] font-semibold">26/08 (quarta-feira) às 19h</strong>.
+              As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca.
             </p>
 
-            {/* Event Key Details: Date & Meet Badges (Larger size) */}
+            {/* Event Key Details: Date & Meet Badges */}
             <div className="w-full flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1">
               {/* 1. Date & Time */}
               <div className="inline-flex items-center justify-center space-x-2.5 bg-[#151A20] border border-[#FFC900]/50 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-semibold text-[#FFC900] shadow-md whitespace-nowrap w-full sm:w-auto">
