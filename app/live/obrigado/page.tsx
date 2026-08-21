@@ -56,7 +56,7 @@ export default function LiveObrigadoPage() {
             Para receber o link da aula ao vivo e os materiais exclusivos, entre agora no grupo de avisos no WhatsApp. É por lá que enviamos tudo com antecedência.
           </p>
           <p className="text-xs sm:text-sm text-gray-400">
-            O encontro acontece <strong className="text-white font-semibold">quarta-feira, às 19h, ao vivo pelo Google Meet</strong>.
+            O encontro acontece <strong className="text-white font-semibold">quarta-feira, dia 26/08 às 19h, ao vivo pelo Google Meet</strong>.
           </p>
         </div>
 

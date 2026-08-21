@@ -25,13 +25,13 @@ export function LiveFinalCTASection() {
         <div className="inline-flex items-center space-x-2 bg-[#151A20] border border-[#FFC900]/40 px-4 py-1.5 rounded-full mb-6 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-[#FFC900] animate-pulse"></span>
           <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wide">
-            Últimas vagas disponíveis
+            Últimas vagas disponíveis • 26/08 às 19h
           </span>
         </div>
 
-        {/* Main Headline (Normal formatting) */}
+        {/* Main Headline */}
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-poppins font-bold text-white tracking-tight leading-tight mb-6">
-          Quarta-feira, às 19h.
+          26/08 • Quarta-feira, às 19h.
           <br />
           <span className="text-gap3-gold-gradient">
             Uma hora para olhar o crescimento do seu restaurante de outra forma.
@@ -40,24 +40,19 @@ export function LiveFinalCTASection() {
 
         {/* Subtitle & Description */}
         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8">
-          Ao vivo, pelo Google Meet. Conheça estratégias para gerar demanda, aumentar a recompra e construir um restaurante com mais previsibilidade.
+          Ao vivo, pelo Google Meet no dia <strong className="text-white font-semibold">26/08 (quarta-feira) às 19h</strong>. Conheça estratégias para gerar demanda, aumentar a recompra e construir um restaurante com mais previsibilidade.
         </p>
 
         {/* Badges / Information Tags */}
-        <div className="flex flex-wrap justify-center items-center gap-3 mb-10">
-          <div className="inline-flex items-center space-x-2 bg-[#151A20] border border-[#2D3440] px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-white shadow-sm">
-            <GoogleMeetIcon size={18} />
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-10">
+          <div className="inline-flex items-center space-x-2.5 bg-[#151A20] border border-[#FFC900]/50 px-5 py-2.5 rounded-full text-sm font-semibold text-[#FFC900] shadow-md">
+            <SolarIcon name="solar:calendar-date-bold" size={20} className="text-[#FFC900] shrink-0" />
+            <span>26/08 | Quarta-feira • 19h</span>
+          </div>
+
+          <div className="inline-flex items-center space-x-2.5 bg-[#151A20] border border-[#2D3440] px-5 py-2.5 rounded-full text-sm font-semibold text-white shadow-md">
+            <GoogleMeetIcon size={20} />
             <span>Ao vivo | Google Meet</span>
-          </div>
-
-          <div className="inline-flex items-center space-x-2 bg-[#151A20] border border-[#00E636]/40 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#00E636] shadow-sm">
-            <SolarIcon name="solar:check-circle-bold" size={18} />
-            <span>Participação gratuita</span>
-          </div>
-
-          <div className="inline-flex items-center space-x-2 bg-[#151A20] border border-[#FFC900]/40 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#FFC900] shadow-sm">
-            <SolarIcon name="solar:clock-circle-bold" size={18} />
-            <span>Duração: 60 minutos</span>
           </div>
         </div>
 

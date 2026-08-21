@@ -38,11 +38,11 @@ export function LiveHero() {
               </span>
             </Link>
 
-            {/* Top Pill Badge */}
+            {/* Top Pill Badge with Date */}
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#1C2026] via-[#2A313D] to-[#1C2026] border border-[#FFC900]/40 px-4 py-1.5 rounded-full shadow-lg shadow-black/50">
               <span className="w-2 h-2 rounded-full bg-[#FFC900] animate-pulse"></span>
               <span className="text-xs sm:text-sm font-poppins font-semibold text-[#FFC900] tracking-wide">
-                Evento exclusivo para donos de restaurantes
+                26/08 • Quarta-feira às 19h | Evento exclusivo para donos de restaurantes
               </span>
             </div>
 
@@ -52,37 +52,24 @@ export function LiveHero() {
               <span className="text-gap3-gold-gradient">crescem</span>
             </h1>
 
-            {/* Description */}
+            {/* Description with Date */}
             <p className="text-sm sm:text-base lg:text-lg font-inter font-normal text-gray-300 leading-relaxed max-w-2xl">
-              As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca.
+              As estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com mais previsibilidade, sem deixar o crescimento nas mãos do boca a boca. Encontro ao vivo no dia <strong className="text-[#FFC900] font-semibold">26/08 (quarta-feira) às 19h</strong>.
             </p>
 
-            {/* Event Key Details: Styled exactly like the pill tags in Final CTA section */}
-            <div className="w-full flex flex-col items-center sm:flex-row sm:flex-wrap lg:items-start justify-center lg:justify-start gap-3 sm:gap-3.5 pt-1">
-              
-              {/* 1. Tag Acesso: 1st place and centered on mobile */}
-              <div className="w-full sm:w-auto flex justify-center order-1 sm:order-3">
-                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#00E636]/40 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#00E636] shadow-sm whitespace-nowrap">
-                  <SolarIcon name="solar:check-circle-bold" size={18} className="shrink-0" />
-                  <span>Online e gratuito</span>
-                </div>
+            {/* Event Key Details: Date & Meet Badges (Larger size) */}
+            <div className="w-full flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-1">
+              {/* 1. Date & Time */}
+              <div className="inline-flex items-center justify-center space-x-2.5 bg-[#151A20] border border-[#FFC900]/50 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-semibold text-[#FFC900] shadow-md whitespace-nowrap w-full sm:w-auto">
+                <SolarIcon name="solar:calendar-date-bold" size={20} className="text-[#FFC900] shrink-0" />
+                <span>26/08 | Quarta-feira • 19h</span>
               </div>
 
-              {/* 2 & 3: Two columns side-by-side on mobile */}
-              <div className="w-full max-w-[380px] sm:max-w-none grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:w-auto order-2 sm:order-1 items-center justify-center">
-                {/* 2. Date & Time */}
-                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#FFC900]/40 px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-[#FFC900] shadow-sm whitespace-nowrap">
-                  <SolarIcon name="solar:calendar-date-bold" size={18} className="text-[#FFC900] shrink-0" />
-                  <span>Quarta-feira | 19h</span>
-                </div>
-
-                {/* 3. Google Meet */}
-                <div className="inline-flex items-center justify-center space-x-2 bg-[#151A20] border border-[#2D3440] px-3.5 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-white shadow-sm whitespace-nowrap">
-                  <GoogleMeetIcon size={18} />
-                  <span>Ao vivo | Google Meet</span>
-                </div>
+              {/* 2. Google Meet */}
+              <div className="inline-flex items-center justify-center space-x-2.5 bg-[#151A20] border border-[#2D3440] px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-semibold text-white shadow-md whitespace-nowrap w-full sm:w-auto">
+                <GoogleMeetIcon size={20} />
+                <span>Ao vivo | Google Meet</span>
               </div>
-
             </div>
 
           </div>

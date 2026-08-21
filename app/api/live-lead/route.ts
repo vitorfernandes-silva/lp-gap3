@@ -4,18 +4,16 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    // Webhook endpoint (configurable via environment variable)
-    // TODO: configurar URL do webhook oficial da GAP3 Assessoria para a Live
+    // Webhook endpoint (Google Apps Script da Live GAP3)
     const webhookUrl =
       process.env.NEXT_PUBLIC_LIVE_LEAD_WEBHOOK_URL ||
       process.env.LIVE_LEAD_WEBHOOK_URL ||
-      process.env.NEXT_PUBLIC_LEAD_WEBHOOK_URL ||
-      process.env.LEAD_WEBHOOK_URL;
+      "https://script.google.com/macros/s/AKfycbweqJQKCxixZSvPE0O6cWAyA8doLvt0K-T8uWc_5-jHd6iyiHLliYOthlPByxMlYz3Myw/exec";
 
     const payload = {
       ...body,
       source: "Live — Os Bastidores dos Restaurantes que Crescem",
-      event: "Live Google Meet Quarta 19h",
+      event: "Live Google Meet 26/08 Quarta 19h",
       timestamp: new Date().toISOString(),
     };
 

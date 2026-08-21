@@ -8,11 +8,11 @@ import { LiveFooter } from "@/components/live/LiveFooter";
 export const metadata: Metadata = {
   title: "Live: Os Bastidores dos Restaurantes que Crescem | GAP3 Assessoria",
   description:
-    "Descubra as estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com previsibilidade. Quarta-feira às 19h no Google Meet.",
+    "Descubra as estratégias por trás dos restaurantes que conseguem vender durante a semana, fazer clientes voltarem e construir receita com previsibilidade. Dia 26/08 (quarta-feira) às 19h no Google Meet.",
   openGraph: {
     title: "Live: Os Bastidores dos Restaurantes que Crescem | GAP3 Assessoria",
     description:
-      "Evento online e gratuito exclusivo para donos de restaurantes. Quarta-feira às 19h, ao vivo pelo Google Meet.",
+      "Evento online e gratuito exclusivo para donos de restaurantes. Dia 26/08 (quarta-feira) às 19h, ao vivo pelo Google Meet.",
     type: "website",
     locale: "pt_BR",
   },
