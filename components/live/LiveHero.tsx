@@ -47,7 +47,7 @@ export function LiveHero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-poppins font-bold tracking-tight leading-[1.12] text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-poppins font-bold tracking-tight leading-[1.08] text-white">
               Os bastidores dos restaurantes que{" "}
               <span className="text-gap3-gold-gradient">crescem</span>
             </h1>
