@@ -9,7 +9,7 @@ export default function LiveObrigadoPage() {
   // WhatsApp group link (configurable via env variable or fallback)
   const whatsappGroupUrl =
     process.env.NEXT_PUBLIC_WHATSAPP_GROUP_URL ||
-    "https://chat.whatsapp.com/"; // Substituir pelo link do grupo oficial
+    "https://chat.whatsapp.com/DVGq6G1xRo35hPB6rF5oZN?s=cl&p=i&mlu=0&amv=1";
 
   return (
     <main className="min-h-screen bg-[#0C1014] text-white flex flex-col justify-center items-center font-inter selection:bg-[#FFC900] selection:text-[#0C1014] relative overflow-hidden px-4 py-12 sm:py-16">
